@@ -7,7 +7,7 @@ nose
 pil
 scrapy
 south
--e git+https://github.com/holgerd77/django-dynamic-scraper.git#egg=django-dynamic-scraper
+git+https://github.com/holgerd77/django-dynamic-scraper.git
 
 # Recommended
 ipython
