@@ -2,14 +2,15 @@
 Utility method tests
 """
 from tempfile import mkdtemp
-import unittest
-from gbots.tests import skip, TestCase
-from gbots.util.web import save_web_page_complete, convert_to_posix_args
+from unittest import skip, TestCase
+
 from gbots.util.loggers import getLogger
+from gbots.util.pynix import convert_to_posix_args
+from gbots.util.web import save_web_page_complete
 
 logger = getLogger(__name__)
 
-class PynixTest(unittest.TestCase):
+class PynixTest(TestCase):
     """
     @note: inheriting from a simple unittest.TestCase to avoid loading fixtures
     """
@@ -47,17 +48,11 @@ class PynixTest(unittest.TestCase):
 
 
 class WebTest(TestCase):
-    def setUp(self):
-        self.temp_dir = mkdtemp(prefix="%s-%s_" % ('-'.join(__name__.split('.')), self.__class__.__name__))
-
     @skip("this test takes too long to run every time")
     def testSaveWebPageComplete(self):
+        temp_dir = mkdtemp(prefix="%s-%s_" % ('-'.join(__name__.split('.')), self.__class__.__name__))
         path = "www.nytimes.com/2012/11/06/world/middleeast/Syria.html"
-        save_web_page_complete(
-            "http://" + path,
-            self.temp_dir,
-            quiet=True
-        )
-        logger.log("Web page saved to file://%s/%s" % (self.temp_dir, path))
+        save_web_page_complete("http://" + path, temp_dir, quiet=True)
+        logger.log("Web page saved to file://%s/%s" % (temp_dir, path))
 
 

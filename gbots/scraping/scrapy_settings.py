@@ -32,18 +32,16 @@ os.chdir(PROJECT_ROOT)
 #
 
 BOT_NAME = 'gbots.scraping.news'
-BOT_VERSION = '1.0'
 
-SPIDER_MODULES = ['dynamic_scraper.spiders', 'gbots.scraping.news.spiders']
+SPIDER_MODULES = 'dynamic_scraper.spiders', 'gbots.scraping.news.spiders'
 NEWSPIDER_MODULE = 'gbots.scraping.news'
-USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
 
-ITEM_PIPELINES = [
+ITEM_PIPELINES = (
     'dynamic_scraper.pipelines.ValidationPipeline',
 #    'scraping.news.pipelines.DjangoWriterPipeline',
-]
+)
 
 COMMANDS_MODULE = 'gbots.scraping.commands'
 
 # Custom command settings
-SAMPLE_WEB_ROOT = os.path.join(PROJECT_ROOT, 'sample', 'web')
+SAMPLE_WEBROOT = os.path.join(PROJECT_ROOT, 'testroot')

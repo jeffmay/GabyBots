@@ -121,5 +121,26 @@
       "mandatory": true, 
       "reg_exp": ""
     }
+  },
+  {
+    "pk": 1,
+    "model": "dynamic_scraper.scraper",
+    "fields": {
+      "status": "M",
+      "pagination_page_replace": "",
+      "checker_ref_url": "",
+      "checker_x_path_result": "",
+      "name": "RSS Article Scraper",
+      "max_items_save": 1,
+      "checker_x_path": "",
+      "pagination_append_str": "",
+      "max_items_read": 1,
+      "pagination_on_start": false,
+      "pagination_type": "N",
+      "checker_type": "N",
+      "comments": "",
+      "content_type": "X",
+      "scraped_obj_class": 1
+    }
   }
 ]

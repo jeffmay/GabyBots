@@ -1,12 +1,12 @@
 """
-Tests for the scraping app.
+Tests for the process function.
 """
 
-from gbots.tests import TestCase
 from gbots.scraping.processors import process
+from gbots.scraping.tests import TestCase
 
 
-class ProcessorTest(TestCase):
+class SubstituteProcessorTest(TestCase):
     """
     Tests process function.
     """

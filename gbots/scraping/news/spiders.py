@@ -10,14 +10,10 @@ from gbots.scraping.models import Article, WebSource, BaseItemModel
 from gbots.scraping.news.items import ArticleItem, BaseItem
 from gbots.util.strings import clean_control_chars
 
-# TODO: Convert this to a base item spider
-
 # 1. check if the spider is done scraping
 # 2. if not, find the appropriate web source
 
-class SourceSpider(DjangoSpider):
-    name = 'source'
-
+class BaseItemSpider(DjangoSpider):
     def __init__(self, *args, **kwargs):
         self.kwargs = kwargs
         self._set_ref_object(WebSource, **kwargs)
@@ -26,7 +22,10 @@ class SourceSpider(DjangoSpider):
         self.scraped_obj_class = BaseItemModel
         self.scraped_obj_item_class = BaseItem
         self.scheduler_runtime = self.ref_object.scraper_runtime
-        super(SourceSpider, self).__init__(self, *args, **kwargs)
+        super(BaseItemSpider, self).__init__(self, *args, **kwargs)
+
+class SourceSpider(BaseItemSpider):
+    name = 'source'
 
     def _set_ref_object(self, ref_object_class, **kwargs):
         # TODO: allow searching by alias
@@ -46,7 +45,7 @@ class SourceSpider(DjangoSpider):
             return item
         else:
             # open a new scraper for the processed url
-            self.log("openning scraper for %s" % processed_url)
+            self.log("opening scraper for %s" % processed_url)
             self.open_scraper_for(item, processed_url)
             return item
 
@@ -59,15 +58,14 @@ class SourceSpider(DjangoSpider):
         # TODO: Either create new spider, or reinitialize this one
         # Test to see which is better
         # Open matching django spider here instead of reusing the same spider?
-
-    #        return Request(url, self.process_item, meta={'item': item})
+#        return Request(url, self.process_item, meta={'item': item})
 
     def is_done_scraping(self, item):
         # Always retrieve a source for this item
         return False
 
 
-class RssFeedSpider(SourceSpider):
+class RssFeedSpider(BaseItemSpider):
     name = 'rss'
 
     def is_done_scraping(self, item):

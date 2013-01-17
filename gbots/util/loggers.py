@@ -1,7 +1,6 @@
 import logging
 from scrapy import log as scrapy_log
 
-__author__ = 'jeffmay'
 
 class CommonLogger(object):
     """
@@ -13,8 +12,6 @@ class CommonLogger(object):
         self._django_logger = logging.getLogger(name)
 
     def log(self, msg, level=logging.DEBUG, *args, **kwargs):
-        if scrapy_log.started is False:
-            scrapy_log.start()
         scrapy_log.msg(msg, level=level, **kwargs)
         self._django_logger.log(level, msg, *args, **kwargs)
 
