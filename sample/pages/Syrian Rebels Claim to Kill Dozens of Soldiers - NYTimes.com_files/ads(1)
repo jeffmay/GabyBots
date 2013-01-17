@@ -1,0 +1,29 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "contextual"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=Chy4eImSYUMb6LLHQ0AGvtoGAC4j2--4CwI2MhzjAjbcBEAEgnPP4AVDam7bsAmDJhqOH1KOAEKABqJe53APIAQGoAwGqBIEBT9A6-wT33GAuIzv72WmVTTZmvixsNHqHR6K8MzApe9RsqfL8Y4L0HRIbRtVr0M_6qCeMu7djMexVtCsphA2LYySqadmQzu1rIQSuzRRgvFUxLtOOFh4q1cp_iGYboEtLvbZxbby9Hc3jKofSgm8fDNqTgAiGT9llNSjzMch5hZ0fiAYB&amp;num=1&amp;cid=5Gj4KuhKs_AIlJa1LRUKysGN&amp;sig=AOD64_36rLbsxUlwMzUgP_vX-zwdCq5Pug&amp;client=ca-nytimes_article_var&amp;adurl=http://developers.squarespace.com/api/track/Redirect%3Furl%3D/%26channel%3Dsem%26subchannel%3Dgo%26source%3D(us_d)%26campaign%3D(b_usdev_kc_html)%26subcampaign%3D(4)%26variation%3D14983688656"; 
+google_ad.visible_url = "developers.squarespace.com"; 
+google_ad.line1 = "Developers Now Welcome"; 
+google_ad.line2 = "Forget Servers. Focus on Code."; 
+google_ad.line3 = "CSS. HTML. LESS. SFTP. GIT."; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.nytimes.com/2012/11/06/world/middleeast/Syria.html%26gl%3DUS%26hl%3Den%26client%3Dca-nytimes_article_var%26hideleadgen%3D1%26ai0%3DChy4eImSYUMb6LLHQ0AGvtoGAC4j2--4CwI2MhzjAjbcBEAEgnPP4AVDam7bsAmDJhqOH1KOAEKABqJe53APIAQGoAwGqBIEBT9A6-wT33GAuIzv72WmVTTZmvixsNHqHR6K8MzApe9RsqfL8Y4L0HRIbRtVr0M_6qCeMu7djMexVtCsphA2LYySqadmQzu1rIQSuzRRgvFUxLtOOFh4q1cp_iGYboEtLvbZxbby9Hc3jKofSgm8fDNqTgAiGT9llNSjzMch5hZ0fiAYB\x26usg\x3dAFQjCNGBQ8ka9xS6g9lDjVUL4r7KVo4-3A";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

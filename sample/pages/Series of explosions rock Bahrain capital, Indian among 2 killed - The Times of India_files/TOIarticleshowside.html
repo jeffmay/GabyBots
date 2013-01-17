@@ -1,0 +1,132 @@
+
+<!-- saved from url=(0074)http://timesofindia.indiatimes.com/configspace/ads/TOIarticleshowside.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Type" content="text/html"><style type="text/css">a{text-decoration:none}
+				a:hover{text-decoration: underline}</style><script type="text/javascript" src="osd.js"></script></head><body marginwidth="0" marginheight="0"><script language="JavaScript">
+document.domain='indiatimes.com';
+var weight_a = 50;
+var weight_b = 50;
+ 
+var ab_data = new Array();
+ 
+ad_request_a = new Object();
+// Adsense API parameteres for A
+ad_request_a.google_ad_channel = 'articleshow_right';
+ad_request_a.google_ad_client ='ca-timesofindia_site_js';
+ad_request_a.google_ad_output = 'js';
+ad_request_a.google_max_num_ads = '1';
+ad_request_a.google_ad_type = 'text';
+ad_request_a.google_adtest = 'off';
+// UI specific params for A
+ 
+ad_request_b = new Object();
+// Adsense API parameteres for B
+ad_request_b.google_ad_channel = 'articleshow_right1';
+ad_request_b.google_ad_client ='ca-timesofindia_site_js';
+ad_request_b.google_ad_output = 'js';
+ad_request_b.google_max_num_ads = '1';
+ad_request_b.google_ad_type = 'text';
+ad_request_b.google_adtest = 'off';
+// UI specific params for B
+ 
+ab_data[0] = ad_request_a;
+ab_data[1] = ad_request_b;
+ 
+// __ END OF CONFIG __  No need to change AB data values below this
+ 
+// randomly assign which for A or B to use based on weights
+//var rnno = Math.random();
+//alert(rnno);
+//alert(Math.floor(rnno * (weight_a + weight_b) / weight_a));
+//var ab_id = (Math.floor(rnno * (weight_a + weight_b) / weight_a) == 0)?0:1;
+//alert(ab_id);
+ 
+//var rnno = Math.random();
+//alert(rnno);
+//var ab_id = (rnno < 0.6)?0:1;
+ 
+var dtObj = new Date();
+var dtSec = dtObj.getMilliseconds();
+var ab_id=(Math.floor(dtSec % ((weight_a + weight_b) / weight_a)) == 0)?0:1;
+//alert(ab_id);
+				
+	
+				</script><script language="JavaScript">if(ab_id==0)
+{
+try{
+var it_showhide=[1,1,1]; //Title,Description,URL
+var it_title=['font-family','georgia','font-size','17px','color','#2b55aa','font-weight','bold'];
+var it_desc=['font-family','georgia','font-size','12px','color','#000000','font-weight','normal','text-decoration','none'];
+var it_url=['font-family','georgia','font-size','14px','color','#000000','font-weight','bold'];
+var it_abg=['font-family','georgia','font-size','10px','color','#000000','font-weight','normal','text-decoration','none'];
+var it_bgcolor=['ffffff','ffffff','ffffff','ffffff']; //1=table background;2=ads by google background
+var it_border=[1,1,1,1,0,0,0,0,'ebebeb','ebebeb','solid','line']; //left,right,top,bottom
+//var google_image=1549413;
+var it_table=[0,0,0,0];//cellpadding,cellspacing
+var it_params=[1,['-','#00309c',':','#00309c'],1,1,7671349,0,1,1,300,80,0];
+//adsbygoogleposition,separator,singleline[0,1,2],line3,bulletimage,bullets[0,1],tableheight[0,1],matrix[1,2],width,height,adtype
+var it_topfeedback=['padding-left','15px','padding-bottom','1px'];
+var it_bottomfeedback=['padding-right','0px','padding-bottom','0px','padding-top','0px'];
+var it_BCol=['padding-left','0px','padding-right','0px','padding-top','2px','padding-bottom','0px'];
+var it_BPadding=['padding-left','0px','padding-right','0px','padding-top','2px','padding-bottom','0px'];
+var it_WBPadding=['padding-left','0px','padding-right','0px','padding-top','0px','padding-bottom','0px'];
+var it_BURL=['padding-left','0px','padding-right','0px','padding-top','0px','padding-bottom','0px'];
+var it_WBURL=['padding-left','0px','padding-right','0px','padding-top','0px','padding-bottom','0px'];
+var ns_alternate_ad_url='';
+//var it_innerTableW=[0,'width="320"'];
+var it_DescUrl=1; //Value 0 will make Title, URL, Description and Value 1 will make Title, Description, URL.
+var it_titleImg=[0,'http://timesofindia.indiatimes.com/photo/5530434.cms'] //Value 1 will enable an image beside the Title. The image will appear on the Right Side of the Title.
+var it_CheckAdFormat=[1,3]; //Value 1 specifies that we need to check for Single ad and 3 specifies the formatting type to be used for this AD
+
+
+ 
+}
+catch(er){}
+}
+else if (ab_id==1)
+{
+try{
+var it_showhide=[1,1,1]; //Title,Description,URL
+var it_title=['font-family','georgia','font-size','17px','color','#2b55aa','font-weight','bold'];
+var it_desc=['font-family','georgia','font-size','12px','color','#000000','font-weight','normal','text-decoration','none'];
+var it_url=['font-family','georgia','font-size','14px','color','#000000','font-weight','bold'];
+var it_abg=['font-family','georgia','font-size','10px','color','#000000','font-weight','normal','text-decoration','none'];
+var it_bgcolor=['e8e8e8','ffffff','e8e8e8','e8e8e8']; //1=table background;2=ads by google background
+var it_border=[1,1,1,1,0,0,0,0,'000000','000000','dotted','line']; //left,right,top,bottom
+//var google_image=1549413;
+var it_table=[0,0,0,0];//cellpadding,cellspacing
+var it_params=[1,['-','#00309c',':','#00309c'],3,1,7671349,0,1,1,300,80,0];
+//adsbygoogleposition,separator,singleline[0,1,2],line3,bulletimage,bullets[0,1],tableheight[0,1],matrix[1,2],width,height,adtype
+var it_topfeedback=['padding-left','2px','padding-bottom','1px'];
+var it_bottomfeedback=['padding-right','2px','padding-bottom','0px','padding-top','0px'];
+var it_BCol=['padding-left','0px','padding-right','0px','padding-top','2px','padding-bottom','0px'];
+var it_BPadding=['padding-left','0px','padding-right','0px','padding-top','2px','padding-bottom','0px'];
+var it_WBPadding=['padding-left','30px','padding-right','0px','padding-top','0px','padding-bottom','0px'];
+var it_BURL=['padding-left','0px','padding-right','0px','padding-top','0px','padding-bottom','0px'];
+var it_WBURL=['padding-left','5px','padding-right','0px','padding-top','0px','padding-bottom','0px','background-color','#e8e8e8'];
+var ns_alternate_ad_url='';
+//var it_innerTableW=[0,'width="320"'];
+var it_DescUrl=1; //Value 0 will make Title, URL, Description and Value 1 will make Title, Description, URL.
+var it_titleImg=[0,'http://timesofindia.indiatimes.com/photo/5530434.cms'] //Value 1 will enable an image beside the Title. The image will appear on the Right Side of the Title.
+var it_CheckAdFormat=[1,3]; //Value 1 specifies that we need to check for Single ad and 3 specifies the formatting type to be used for this AD 
+ 
+}
+catch(er){}
+}
+var tmpcols
+
+				</script><script language="JavaScript" src="googletiladsense_stn_v14.js"></script><script language="JavaScript">// With this JS, you can then use Google parameters as mentioned
+// pick dynamic A/B values from ab_data[]
+// common params may just be hardcoded
+google_ad_client = ab_data[ab_id].google_ad_client;
+google_ad_type = ab_data[ab_id].google_ad_type;
+google_max_num_ads = ab_data[ab_id].google_max_num_ads;
+google_ad_channel = ab_data[ab_id].google_ad_channel;
+google_ad_output = 'js';
+google_adtest = 'off';
+google_safe     = "high";
+google_feedback = "on";
+google_color_line = "ff0000";
+//google_page_url = 'http://timesofindia.indiatimes.com';
+google_page_url=document.referrer; 
+google_skip=2;
+				</script><script language="JavaScript" src="show_ads.js"></script><script src="show_ads_impl.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><script language="JavaScript1.1" src="ads(3)"></script><table cellpadding="0" cellspacing="0" width="300" height="80" style="border-style:dotted;border-left-width:1px;border-right-width:1px;border-top-width:1px;border-bottom-width:1px;border-color: #000000" border="0" bgcolor="#e8e8e8"><tbody><tr><td valign="top" align="left"><table cellspacing="0" width="100%" border="0" style="border-style:line;border-left-width:0px;border-right-width:0px;border-top-width:0px;border-bottom-width:0px;border-color: #000000"><tbody><tr><td bgcolor="#e8e8e8" style="padding-left:30px;padding-right:0px;padding-top:0px;padding-bottom:0px;" colspan="2" valign="bottom" height="50%"><a href="http://www.googleadservices.com/pagead/aclk?sa=L&ai=Ca7RZrmSYULGFLoua6gGskYHICfvJxqoDi8OssRyz56OXZxABIKjwpgZQ_4bBx_z_____AWDJhqOH1KOAEKABlafT3gPIAQGoAwGqBNwBT9CFtAXlPmEoxsLkniWSQfYmnashonl1dFMCES6KNzkdYzcolNElbU8z4KMtYYEgBSsp9F82adZAZKnYizAT0ynEB-dVntshPRXCdUCj2T1IcVnBzkTQ1W_dX843DgMQsubIlDrxNwwdujdxWC4xWVR9W4d_u27IEJnESN21CInMkgU6hPg7k4gk1UvsrHk8Eke88LC3I1kE8EbOfphI0-xDhf3lYdDJnR2K31RV6oXwI3Hmipo7bY6CcbCR0a3ihg8Okedls_MZXuwnpBlUAA2OOxywVmG9B8CFdIgGAQ&num=1&cid=5Gj276k1SlKsPUt-NLaOHVfR&sig=AOD64_2UPYTf9Zm4Y-Sq9CbcRozc1eofTw&client=ca-timesofindia_site_js&adurl=http://www.lumosity.com/landing%3Frefer%3D703%26a%3DExerciseYourBrain_Fight_Text%26Network%3DContent%26kw%3D%26ad%3D7526092659%26SiteTarget%3Dtimesofindia.indiatimes.com" target="_blank" style="font-family:georgia;font-size:17px;color:#2b55aa;font-weight:bold;" onmouseover="window.status=&#39;www.lumosity.com&#39;;return true" onmouseout="window.status=&#39;&#39;;return true">Exercise Your Brain</a></td></tr><tr><td style="padding-left:5px;padding-right:0px;padding-top:0px;padding-bottom:0px;background-color:#e8e8e8;" valign="top" bgcolor="#e8e8e8"><span style="font-family:georgia;font-size:12px;color:#000000;font-weight:normal;text-decoration:none;">Games You Didn't Know Existed to Fight Brain Decline and Aging.</span> <span style="color:#00309c">: <span><a href="http://www.googleadservices.com/pagead/aclk?sa=L&ai=Ca7RZrmSYULGFLoua6gGskYHICfvJxqoDi8OssRyz56OXZxABIKjwpgZQ_4bBx_z_____AWDJhqOH1KOAEKABlafT3gPIAQGoAwGqBNwBT9CFtAXlPmEoxsLkniWSQfYmnashonl1dFMCES6KNzkdYzcolNElbU8z4KMtYYEgBSsp9F82adZAZKnYizAT0ynEB-dVntshPRXCdUCj2T1IcVnBzkTQ1W_dX843DgMQsubIlDrxNwwdujdxWC4xWVR9W4d_u27IEJnESN21CInMkgU6hPg7k4gk1UvsrHk8Eke88LC3I1kE8EbOfphI0-xDhf3lYdDJnR2K31RV6oXwI3Hmipo7bY6CcbCR0a3ihg8Okedls_MZXuwnpBlUAA2OOxywVmG9B8CFdIgGAQ&num=1&cid=5Gj276k1SlKsPUt-NLaOHVfR&sig=AOD64_2UPYTf9Zm4Y-Sq9CbcRozc1eofTw&client=ca-timesofindia_site_js&adurl=http://www.lumosity.com/landing%3Frefer%3D703%26a%3DExerciseYourBrain_Fight_Text%26Network%3DContent%26kw%3D%26ad%3D7526092659%26SiteTarget%3Dtimesofindia.indiatimes.com" target="_blank" style="font-family:georgia;font-size:14px;color:#000000;font-weight:bold;" onmouseover="window.status=&#39;www.lumosity.com&#39;;return true" onmouseout="window.status=&#39;&#39;;return true">www.lumosity.com</a></span></span></td></tr><tr><td colspan="2" style="text-align:right;"><a href="http://www.google.com/url?ct=abg&q=https://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://timesofindia.indiatimes.com/india/Series-of-explosions-rock-Bahrain-capital-Indian-among-2-killed/articleshow/17109310.cms%26gl%3DUS%26hl%3Den%26client%3Dca-timesofindia_site_js%26hideleadgen%3D1%26ai0%3DCa7RZrmSYULGFLoua6gGskYHICfvJxqoDi8OssRyz56OXZxABIKjwpgZQ_4bBx_z_____AWDJhqOH1KOAEKABlafT3gPIAQGoAwGqBNwBT9CFtAXlPmEoxsLkniWSQfYmnashonl1dFMCES6KNzkdYzcolNElbU8z4KMtYYEgBSsp9F82adZAZKnYizAT0ynEB-dVntshPRXCdUCj2T1IcVnBzkTQ1W_dX843DgMQsubIlDrxNwwdujdxWC4xWVR9W4d_u27IEJnESN21CInMkgU6hPg7k4gk1UvsrHk8Eke88LC3I1kE8EbOfphI0-xDhf3lYdDJnR2K31RV6oXwI3Hmipo7bY6CcbCR0a3ihg8Okedls_MZXuwnpBlUAA2OOxywVmG9B8CFdIgGAQ&usg=AFQjCNEalVmqkhG4MFmbWUmV4kwGV2FtXQ" target="_blank" style="font-family:georgia;font-size:10px;color:#000000;font-weight:normal;text-decoration:none;">Ads by Google</a></td></tr></tbody></table></td></tr></tbody></table></body></html>

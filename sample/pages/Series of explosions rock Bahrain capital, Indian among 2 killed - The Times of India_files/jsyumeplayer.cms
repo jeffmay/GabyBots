@@ -1,0 +1,164 @@
+
+		           
+var f_cb_medrect1_served = false;
+var f_need_cb = false;
+var f_cb_medrect1_real = false;
+
+function reload_div(flash_id) {
+	if(flash_id=="flash_flv_player") {
+		document.getElementById("flvPlayerDiv").innerHTML = "";
+		playContent();
+	}
+}
+
+function yume_backfill_banner(banner_div_id, banner_frame_id, imu_type) {
+	var rc=0;
+	var cb_width = document.getElementById(banner_div_id).style.width;
+	var cb_height =document.getElementById(banner_div_id).style.height;
+	var y_c_frame = document.getElementById(banner_frame_id);
+	var cb_w = cb_width.split("px", 1);
+	var cb_h = cb_height.split("px", 1);
+	var arg1 ="http://shadow01.yumenetworks.com/dynamic_banner_iframe.html?domain=88ElOFHxAh&width="+cb_w+"&height="+cb_h+"&imu="+imu_type;
+	try {
+		y_c_frame.contentWindow.document.getElementsByTagName("body")[0].innerHTML = "<iframe src='"+arg1+"'height='"+cb_height+"'width='"+cb_width+"' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' topmargin='0' leftmargin='0' style='overflow:hidden'></iframe>";
+		rc = 1;
+	} catch(e) {}
+	return rc;
+}
+
+function yume_serve_cb_frame(banner_div_id, banner_frame_id, frame_src_url) {
+	var rc=0;
+	var cb_width = document.getElementById(banner_div_id).style.width;
+	var cb_height =document.getElementById(banner_div_id).style.height;
+	var y_c_frame = document.getElementById(banner_frame_id);
+	try {
+		y_c_frame.contentWindow.document.getElementsByTagName("body")[0].innerHTML = "<iframe src='"+frame_src_url+"'height='"+cb_height+"'width='"+cb_width+"' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' topmargin='0' leftmargin='0' style='overflow:hidden'></iframe>";
+		rc = 1;
+	} catch(e) {
+		y_c_frame.src = frame_src_url;
+		rc = 1;		
+	}
+	return rc;
+}
+
+function yume_serve_cb_image(banner_div_id, banner_frame_id, frame_img, frame_link) {
+	var rc=0;
+	var cb_width = document.getElementById(banner_div_id).style.width;
+	var cb_height =document.getElementById(banner_div_id).style.height;
+	var y_c_frame = document.getElementById(banner_frame_id);
+	try {
+		if (frame_img.length > 0 && frame_img.toLowerCase().indexOf("<a") == 0) {
+			y_c_frame.contentWindow.document.getElementsByTagName("body")[0].innerHTML = frame_img;
+		} else
+		y_c_frame.contentWindow.document.getElementsByTagName("body")[0].innerHTML = "<a href='"+frame_link+"' target='_blank'><img src='"+frame_img+"' border='0' width='"+cb_width+"' height='"+cb_height+"'></a>";
+		rc = 1;
+	} catch(e) {}
+	return rc;
+}
+
+// return 1 if img_url is a SWF, 0 otherwise
+function yume_img_is_swf(img_url) {
+        var ix_getElement = img_url.indexOf("/getElement?", 0);
+        var ix_extSWF = img_url.indexOf("ext=.swf", 0);
+        var rc=0;
+
+        if (ix_getElement > 0 && ix_extSWF > ix_getElement) {
+                rc=1;
+        }
+        return rc;
+}
+
+function yume_flash_callback(command, arg1, arg2, arg3){
+
+	if (command == 'companionbanner/iframe')
+	{
+		if (arg3=="roll_1") {
+			if (yume_serve_cb_frame("yume_roll1_div", "yume_roll1_frame", arg1) > 0) {
+				showRollDiv();
+			}
+        }
+	}
+        if (command == 'companionbanner/iframe'
+          || (command == 'companionbanner/image' && yume_img_is_swf(arg1) > 0) // serve SWFs as an Iframe
+           )
+        {
+		//alert("yume_flash_callback:" + command +"," + arg1 + "," + arg2 + "," + arg3);
+		if (arg3=="cb1" || arg3=="cb_medrect1") {
+			if (yume_serve_cb_frame("cb_medrect1_div", "cb_medrect1_frame", arg1) > 0) {
+				f_cb_medrect1_served = true;
+				f_cb_medrect1_real = true;
+			}
+		} else
+		if (arg3=="cb_leaderboard1") {
+			if (yume_serve_cb_frame("cb_leaderboard1_div", "cb_leaderboard1_frame", arg1) > 0) {
+				f_cb_leaderboard1_served = true;
+				f_cb_leaderboard1_real = true;
+			}
+		}
+	} else if (command == 'companionbanner/image') {
+		//alert("yume_flash_callback:" + command +"," + arg1 + "," + arg2 + "," + arg3);
+		if (arg3=="cb1" || arg3=="cb_medrect1") {
+			if (yume_serve_cb_image("cb_medrect1_div", "cb_medrect1_frame", arg1, arg2) > 0) {
+				f_cb_medrect1_served = true;
+				f_cb_medrect1_real = true;
+			}
+		} else
+		if (arg3=="cb_leaderboard1") {
+			if (yume_serve_cb_image("cb_leaderboard1_div", "cb_leaderboard1_frame", arg1, arg2) > 0) {
+				f_cb_leaderboard1_served = true;
+				f_cb_leaderboard1_real = true;
+			}
+		}
+	} else
+	if(command == "yume_leader_start" || command == "yume_preroll_start" || command == "yume_postroll_start" || command == "yume_midroll_start") {
+		  hideRollDiv();
+		  f_need_cb = true;
+		  //alert("yume_flash_callback:" + command +"," + arg1 + "," + arg2);
+		if(command == "yume_leader_start"){
+			f_cb_medrect1_real = false;
+			f_cb_medrect1_served = false;
+			f_cb_leaderboard1_real = false;
+			f_cb_leaderboard1_served = false;
+		}
+        } else
+	if(command == "yume_leader_end" || command == "yume_preroll_end" || command == "yume_postroll_end" || command == "yume_midroll_end") {
+		  hideRollDiv();
+		  f_need_cb = false;
+		  //alert("yume_flash_callback:" + command +"," + arg1 + "," + arg2);
+        } else
+	if(command == "yume_ad_end") {
+	  f_cb_medrect1_served = false;
+	  f_cb_leaderboard1_served = false;
+	  //alert("yume_flash_callback:" + command +"," + arg1 + "," + arg2);
+        } else
+	if( (command == "yume_ad_start" && f_need_cb == true)
+	  ||(command == "yume_end" && arg1 == "0" && f_need_cb == true) ) {
+		//alert("check for backfill");
+		if ((f_cb_medrect1_served == false)&&(f_cb_medrect1_real == false)) {
+			if (yume_backfill_banner("cb_medrect1_div", "cb_medrect1_frame", "medrect") > 0) {
+				f_cb_medrect1_served = true;
+			}
+		}
+		if ((f_cb_leaderboard1_served == false)&&(f_cb_leaderboard1_real == false)) {
+			if (yume_backfill_banner("cb_leaderboard1_div", "cb_leaderboard1_frame", "leaderboard") > 0) {
+				f_cb_leaderboard1_served = true;
+			}
+		}
+        }
+}
+
+function hideRollDiv(){
+ var theDiv = document.getElementById("yume_roll1_div");
+ theDiv.style.visibility="hidden";
+ var theDiv1 = document.getElementById("yume_roll1_frame");
+ theDiv1.src="http://timesofindia.indiatimes.com/empty.cms";
+ return true;
+}
+
+function showRollDiv(div_w, div_h){
+ //alert("showRollDiv");
+ var theDiv = document.getElementById("yume_roll1_div");
+ theDiv.style.visibility="visible";
+}
+
+		

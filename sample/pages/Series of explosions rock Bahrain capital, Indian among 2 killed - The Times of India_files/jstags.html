@@ -1,0 +1,57 @@
+
+<!-- saved from url=(0088)http://core.saymedia.com/eap/latest/html/jstags.html?CCID=3251304-2&r=0.6414224973414093 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body>
+<script>
+    var vars = {};
+    var v = document.location.search.substring(1).split("&");
+    for (var i = 0; i < v.length; i++)
+    {
+        var kv = v[i].split("=");
+        vars[kv[0]] = unescape(kv[1]);
+    }
+
+    vars.prod = (vars.prod ? vars.prod : "adframes");
+    vars.CCID = (vars.CCID ? vars.CCID : "0000");
+</script>
+
+<!-- Begin comScore Tag -->
+<script>
+    document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script><script src="beacon.js"></script>
+<script>
+    COMSCORE.beacon({
+        c1:8,
+        c2:6036036,
+        c3:"1",
+        c4:"",
+        c5:"",
+        c6:"",
+        c15:""
+    });
+</script>
+<!-- End comScore Tag -->
+
+<!-- Start Quantcast tag -->
+<script type="text/javascript">
+    _qoptions = {
+        qacct:"p-abhYEve3ZZl2E",
+        labels:"ads." + vars.prod + "." + vars.CCID
+    };
+</script>
+<script type="text/javascript" src="quant.js"></script>
+<!-- End Quantcast tag -->
+
+<!-- Start AdMeld Tag -->
+<!-- c1 is hardcoded for the initial test -->
+<script language="JavaScript">
+if (vars.pubid) {
+	document.write('<script src="' 
+	+ "http://tag.admeld.com/ad/json?publisher_id="+vars.pubid+"&site_id=c1&size="+vars.width+"x"+vars.height+"&placement="+vars.plcmtid  
+	+ '"></s'+'cript>');
+}
+</script>
+<!-- End AdMeld Tag -->
+
+
+
+</body></html>

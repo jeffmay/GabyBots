@@ -1,0 +1,88 @@
+
+function CSlider(c,t,n,w){
+		this.c = document.getElementById(c);
+		if(t!="ud")t="lr";
+		this.s = w;
+		this.p = (t=="lr") ? "left" : "top";
+		this.l = false;		
+		this.cs=1;this.np = 0;this.n = n;this.tmpn=n;this.intrvl=null;
+		
+		this.startSlide=function(d,o,n){				
+			if(this.l){return;}
+			var tmpval=0;
+			if(n<this.cs){
+				tmpval = this.cs-n;d='r';
+			}else if(this.cs<n){
+				tmpval = n-this.cs;
+			}
+			this.n=this.tmpn*(tmpval);
+			this.cs=n;
+			this.l=true;			
+			this.intrvl=setInterval(""+o+".move('"+d+"','"+o+"')",5);			
+			this.np = this.getNP(d);
+		};
+		this.move=function(d,o){
+			if(this.getMv(d)){
+				eval("this.c.style."+this.p+"=this.np+'px'");
+				clearInterval(this.intrvl);
+				this.l=false;								
+			}else{
+				eval("this.c.style."+this.p+"=this.getNCP(d)+'px'");
+			}
+		};		
+		this.getNP=function(d){
+			var o=(d=='l')?"-":"+";
+			return eval("this.getCP()"+ o +"(this.s*this.n)");			
+		};
+		this.getCP=function(d){
+			return eval("parseInt(this.c.style."+this.p+".substring(0,this.c.style."+this.p+".length-2))");
+		};
+		this.getMv=function(d){
+			if(d=='l' && (this.getCP(d)<= this.np))return true;
+			else if(d=='r' && (this.getCP(d)>= this.np))return true;
+			else return false;
+		};
+		this.getNCP=function(d){
+			if(d=='l')return this.getCP(d)-Math.ceil((this.getCP(d)-this.np)/3);
+			else return this.getCP(d)+Math.ceil((this.np-this.getCP(d))/3);
+		};		
+	};
+	function nextSlide(obj,objid,y){		
+		if(obj.cs==y){
+			obj.startSlide('r',objid,1);
+		}else{
+			obj.startSlide('l',objid,(obj.cs+1));
+		}
+	}
+	function prevSlide(obj,objid,y){		
+		if(obj.cs<=1){
+			obj.startSlide('l',objid,y);
+		}else{
+			obj.startSlide('r',objid,(obj.cs-1));
+		}
+	}
+	var cs1 = new CSlider("xx",'',1,260);
+
+
+
+var dTab_d=1;
+	var dTab_u='/new_mostreadsec/-2128936835.cms';
+	function dTabPopulate(_x,day,divid){
+		var tabArray = _x.split("#");
+		dTab_d = day;
+		for(i=0;i<tabArray.length;i++){
+			if(i==0)
+				document.getElementById(tabArray[i]).className="current";
+			else
+				document.getElementById(tabArray[i]).className="";
+		}		
+		populatediv(dTab_u+"?day="+dTab_d,divid);
+	}
+	function sTabPopulate(_x,u,divid){
+		switchtabcomm1(_x,0);
+		dTab_u = u;		
+		populatediv(dTab_u+"?day="+dTab_d,divid);
+	}
+
+                    
+		

@@ -1,0 +1,100 @@
+Reuters.namespace("article");
+Reuters.article.inlinelinks = [];
+Reuters.article.inlinelinks.push( { "text": "Afghanistan", "url": "/places/afghanistan", "title": "Afghanistan" } );
+Reuters.article.inlinelinks.push( { "text": "Argentina", "url": "/places/argentina", "title": "Argentina" } );
+Reuters.article.inlinelinks.push( { "text": "Australia", "url": "/places/australia", "title": "Australia" } );
+Reuters.article.inlinelinks.push( { "text": "Brazil", "url": "/places/brazil", "title": "Brazil" } );
+Reuters.article.inlinelinks.push( { "text": "China", "url": "/places/china", "title": "China" } );
+Reuters.article.inlinelinks.push( { "text": "Congo", "url": "/places/congo", "title": "Congo" } );
+Reuters.article.inlinelinks.push( { "text": "Cuba", "url": "/places/cuba", "title": "Cuba" } );
+Reuters.article.inlinelinks.push( { "text": "France", "url": "/places/france", "title": "France" } );
+Reuters.article.inlinelinks.push( { "text": "Germany", "url": "/places/germany", "title": "Germany" } );
+Reuters.article.inlinelinks.push( { "text": "Greece", "url": "/places/greece", "title": "Greece" } );
+Reuters.article.inlinelinks.push( { "text": "Indonesia", "url": "/places/indonesia", "title": "Indonesia" } );
+Reuters.article.inlinelinks.push( { "text": "Iran", "url": "/places/iran", "title": "Iran" } );
+Reuters.article.inlinelinks.push( { "text": "Ireland", "url": "/places/ireland", "title": "Ireland" } );
+Reuters.article.inlinelinks.push( { "text": "Italy", "url": "/places/italy", "title": "Italy" } );
+Reuters.article.inlinelinks.push( { "text": "Japan", "url": "/places/japan", "title": "Japan" } );
+Reuters.article.inlinelinks.push( { "text": "North Korea", "url": "/places/north-korea", "title": "North Korea" } );
+Reuters.article.inlinelinks.push( { "text": "Pakistan", "url": "/places/pakistan", "title": "Pakistan" } );
+Reuters.article.inlinelinks.push( { "text": "Peru", "url": "/places/peru", "title": "Peru" } );
+Reuters.article.inlinelinks.push( { "text": "Portugal", "url": "/places/portugal", "title": "Portugal" } );
+Reuters.article.inlinelinks.push( { "text": "Russia", "url": "/places/russia", "title": "Russia" } );
+Reuters.article.inlinelinks.push( { "text": "Syria", "url": "/places/syria", "title": "Syria" } );
+Reuters.article.inlinelinks.push( { "text": "Spain", "url": "/places/spain", "title": "Spain" } );
+Reuters.article.inlinelinks.push( { "text": "Saudi Arabia", "url": "/places/saudi-arabia", "title": "Saudi Arabia" } );
+Reuters.article.inlinelinks.push( { "text": "South Korea", "url": "/places/south-korea", "title": "South Korea" } );
+Reuters.article.inlinelinks.push( { "text": "Thailand", "url": "/places/thailand", "title": "Thailand" } );
+Reuters.article.inlinelinks.push( { "text": "Tunisia", "url": "/places/tunisia", "title": "Tunisia" } );
+Reuters.article.inlinelinks.push( { "text": "Turkey", "url": "/places/turkey", "title": "Turkey" } );
+Reuters.article.inlinelinks.push( { "text": "Venezuela", "url": "/places/venezuela", "title": "Venezuela" } );
+Reuters.article.inlinelinks.push( { "text": "Yemen", "url": "/places/yemen", "title": "Yemen" } );
+Reuters.article.inlinelinks.push( { "text": "Yuan", "url": "/subjects/yuan", "title": "the Yuan" } );
+Reuters.article.inlinelinks.push( { "text": "Olympics", "url": "/london-olympics-2012", "title": "the 2012 Summer Olympics" } );
+Reuters.article.inlinelinks.push( { "text": "iPad", "url": "/subjects/ipad", "title": "the Apple iPad" } );
+Reuters.article.inlinelinks.push( { "text": "small business", "url": "/finance/smallBusiness", "title": "small business" } );
+Reuters.article.inlinelinks.push( { "text": "personal finance", "url": "/finance/personal-finance", "title": "personal finance" } );
+Reuters.article.inlinelinks.push( { "text": "currencies", "url": "/finance/currency", "title": "currencies" } );
+Reuters.article.inlinelinks.push( { "text": "finance", "url": "/finance ", "title": "finance" } );
+Reuters.article.inlinelinks.push( { "text": "green business", "url": "/finance/greenBusiness", "title": "green business" } );
+Reuters.article.inlinelinks.push( { "text": "futures", "url": "/finance/futures", "title": "futures" } );
+Reuters.article.inlinelinks.push( { "text": "Dow", "url": "/finance/markets/index?symbol=us!dji", "title": "Dow Jones Industrial Average" } );
+Reuters.article.inlinelinks.push( { "text": "Nasdaq", "url": "/finance/markets/index?symbol=us!comp", "title": "Nasdaq Composite Index" } );
+Reuters.article.inlinelinks.push( { "text": "S&P 500", "url": "/finance/markets/index?symbol=us!spx", "title": "S&P 500" } );
+Reuters.article.inlinelinks.push( { "text": "Nikkei", "url": "/finance/markets/index?symbol=jp!n225", "title": "Nikkei Stock Average 225" } );
+Reuters.article.inlinelinks.push( { "text": "Hang Seng", "url": "/finance/markets/index?symbol=hk!hsi", "title": "Hang Seng Index" } );
+Reuters.article.inlinelinks.push( { "text": "FTSE", "url": "/finance/markets/index?symbol=gb!ftse", "title": "FTSE 100 Index" } );
+Reuters.article.inlinelinks.push( { "text": "EUR", "url": "/finance/currencies/quote?srcCurr=EUR ", "title": "EUR" } );
+Reuters.article.inlinelinks.push( { "text": "JPY", "url": "/finance/currencies/quote?srcCurr=JPY ", "title": "JPY" } );
+Reuters.article.inlinelinks.push( { "text": "GBP", "url": "/finance/currencies/quote?srcCurr=GBP", "title": "GBP" } );
+Reuters.article.inlinelinks.push( { "text": "Brent crude", "url": "/finance/commodity?symbol=GB@IB.1", "title": "Brent crude" } );
+Reuters.article.inlinelinks.push( { "text": "U.S. crude", "url": "/finance/commodity?symbol=US@CL.1", "title": "U.S. crude" } );
+Reuters.article.inlinelinks.push( { "text": "Latin American Investment Summit", "url": "/finance/summit/LatinAmericanInvestment11", "title": "the Reuters Latin American Investment Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Global Mergers and Acquisitions Summit", "url": "http://www.reuters.com/summit/MergersandAcquisitions11", "title": "Global Mergers and Acquisitions Summit" } );
+Reuters.article.inlinelinks.push( { "text": "earnings", "url": "http://www.reuters.com/finance/earnings ", "title": "Earnings" } );
+Reuters.article.inlinelinks.push( { "text": "euro zone", "url": "http://www.reuters.com/subjects/euro-zone ", "title": "Euro Zone" } );
+Reuters.article.inlinelinks.push( { "text": "Reuters Health Summit", "url": "http://www.reuters.com/summit/Health11", "title": "the Reuters Health Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Reuters Global Media Summit", "url": "/summit/GlobalMedia11", "title": "the Reuters Global Media Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Global Media Summit", "url": "/summit/GlobalMedia10", "title": "the Global Media Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Davos", "url": "http://www.reuters.com/subjects/davos", "title": "the Davos World Economic Forum" } );
+Reuters.article.inlinelinks.push( { "text": "Global Technology Summit", "url": "http://www.reuters.com/summit/GlobalTech11", "title": "Global Technology Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Global Energy and Climate Summit", "url": "http://www.reuters.com/summit/GlobalEnergy11", "title": "Global Energy and Climate Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Global Real Estate Summit", "url": "http://www.reuters.com/summit/RealEstate11", "title": "Global Real Estate Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Rebuilding Japan Summit", "url": "http://www.reuters.com/summit/JapanInvestment11", "title": "Rebuilding Japan Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Aerospace and Defense Summit", "url": "http://www.reuters.com/summit/AerospaceandDefense11", "title": "Aerospace and Defense Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Russia Investment Summit", "url": "http://www.reuters.com/summit/AerospaceandDefense11", "title": "Aerospace and Defense Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Global Wealth Management Summit", "url": "http://www.reuters.com/summit/WealthManagement11", "title": "the Global Wealth Management Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Reuters Investment Outlook Summit", "url": "http://www.reuters.com/summit/InvestmentOutlookDec", "title": "the Reuters Investment Outlook Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Global Mining and Steel Summit", "url": "http://www.reuters.com/summit/GlobalMiningandMetals12", "title": "Global Mining and Steel Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Latin America Investment Summit", "url": "http://www.reuters.com/summit/LatinAmericanInvestment12", "title": "Latin America Investment Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Global Media and Technology Summit", "url": "http://www.reuters.com/summit/Technology12", "title": "Global Media and Technology Summit" } );
+Reuters.article.inlinelinks.push( { "text": "Reuters Washington Summit", "url": "http://www.reuters.com/summit/Washington12", "title": "Reuters Washington Summit" } );
+Reuters.article.paragraphs = document.getElementById("articleText").getElementsByTagName("p");Reuters.article.inlinelinks.push( { "text": "Reuters Global Media Summit", "url": "/summit/GlobalMedia11", "title": "the Reuters Global Media Summit" } );
+
+
+Reuters.article.paragraphs = document.getElementById("articleText").getElementsByTagName("p");
+
+Reuters.article.trackInlineLink = function(ind) {
+	try {
+		thisLink = Reuters.article.inlinelinks[ind];
+		dcsMultiTrack('DCSext.VirtualEvent', '1','DCSext.rChannel','Contextual Keyword Link','WT.cg_n', 'Contextual Keyword Link - ' + thisLink.text,'DCSext.modURL',thisLink.url,'DCSext.ModID','','DCSext.ModImp','','DCSext.DartZone','');
+	} catch(e) {}
+}
+
+if (Reuters.info.channel != "pressRelease") {
+for (i=0; i<Reuters.article.paragraphs.length; i++) { 
+	var inputText = Reuters.article.paragraphs[i].innerHTML.replace(/\n/g, " ");
+	for (j=0; j<Reuters.article.inlinelinks.length; j++) {  
+		if (((Reuters.article.paragraphs[i].parentNode.id == "articleText") || (Reuters.article.paragraphs[i].parentNode.className == "focusParagraph")) && (inputText.search(Reuters.article.inlinelinks[j].text) != -1) && (inputText.search("a href") == -1) && (Reuters.article.inlinelinks[j].linked != 1) ) {
+			var pattern = "(\\b" + Reuters.article.inlinelinks[j].text.replace(/ /g, "\\s") + "\\b)(?!'s|</a>)";  
+			var replacePattern = new RegExp(pattern, ""); //m for multiline mode, gets matches at end of paragraph
+			if (replacePattern.test(inputText)){
+				Reuters.article.paragraphs[i].innerHTML = inputText.replace(replacePattern, '<a href="' + Reuters.article.inlinelinks[j].url + '" title="Full coverage of ' + Reuters.article.inlinelinks[j].title + '" onclick="Reuters.article.trackInlineLink(' + j + ')">$1</a>');
+				Reuters.article.inlinelinks[j].linked = 1; 
+				break;
+			}
+			
+		}
+	}
+}
+}

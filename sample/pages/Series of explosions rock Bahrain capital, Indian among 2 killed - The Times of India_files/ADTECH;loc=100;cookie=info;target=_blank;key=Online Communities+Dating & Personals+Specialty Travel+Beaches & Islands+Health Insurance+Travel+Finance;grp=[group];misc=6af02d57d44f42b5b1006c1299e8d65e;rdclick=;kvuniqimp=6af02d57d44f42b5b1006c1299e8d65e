@@ -1,0 +1,9 @@
+document.write("<scr"+"ipt type='text/javascript'>\n");
+document.write("var ACE_AR = {site: '822745', size: '728090'};\n");
+document.write("</scr"+"ipt>\n");
+document.write("\n");
+document.write("<scr"+"ipt type='text/javascript' SRC='http://uac.advertising.com/wrapper/aceUAC.js'>\n");
+document.write("</scr"+"ipt>\n");
+
+var adcount_2554391_1_=new Image();
+adcount_2554391_1_.src="http://adnet.affinity.com/adcount/3.0/5359/2554391/0/225/AdId=3523143;BnId=2;ct=1446351575;st=3133;adcid=1;itime=164525396;reqtype=5;;kvuniqimp=6af02d57d44f42b5b1006c1299e8d65e;kvafseq=1";

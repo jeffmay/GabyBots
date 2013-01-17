@@ -1,0 +1,1 @@
+document.write('<script type="text/javascript" src="http://ads.saymedia.com/ai0154349358e0970c014e8ab3270c970d.js?ord='+ Math.random() + '"></sc'+'ript>')

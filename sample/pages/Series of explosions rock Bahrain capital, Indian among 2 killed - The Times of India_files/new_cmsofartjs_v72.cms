@@ -1,0 +1,1034 @@
+	
+
+		function show_new( id ) { 
+document.getElementById(id).style.display = 'block'; 
+document.getElementById("postid").style.display = 'none';
+putMathQ(1); 
+} 	
+function findPosY(obj){
+    var curtop = 0;
+    if (obj.offsetParent){
+        while (obj.offsetParent){
+            curtop += obj.offsetTop
+            obj = obj.offsetParent;
+        }
+    }else if (obj.y)
+        curtop += obj.y;
+    return curtop;
+}
+
+function findPosX(obj){
+    var curleft = 0;
+    if (obj.offsetParent){
+        while (obj.offsetParent){
+            curleft += obj.offsetLeft
+            obj = obj.offsetParent;
+        }
+    }else if (obj.x)
+    curleft += obj.x;
+    return curleft;
+}
+//document.getElementById("postcmtform").style.top=findPosX(document.getElementById("com2"))+"px";
+function getQueryString (key){ 
+	var qString = window.location.search;                        
+    if (qString.indexOf('?'+ key) > -1){ 
+		qString = qString.substr(qString.indexOf('?'+ key)) ; 
+	}else if (qString.indexOf('&'+ key) > -1){ 
+		qString = qString.substr(qString.indexOf('&'+ key)) ; 
+	}else{ 
+		return ""; 
+	}	                         
+	qString = qString.split('=')[1];                        
+	qString = qString.split('&')[0];                         
+	return unescape(qString); 
+}
+//document.domain='indiatimes.com';
+function make_blank(){
+	var str;
+	str="You will receive an email alert as soon as your comment is live";
+	if(document.mailform.fromaddress.value == str)
+		document.mailform.fromaddress.value ="";
+}
+	
+function putQueryStringInElement(){
+    var romsid =  getQueryString("msid");                
+    //var roopinion =  getQueryString("opinion");
+    //var rotype = getQueryString("type");
+    //var articletitle = getQueryString("articletitle");
+    //document.getElementById("articletitle").value=articletitle;
+    //document.getElementById("subject").value=articletitle + "- Times of India";
+    document.getElementById("SuccessURL").value="http://timesofindia.indiatimes.com/userscomment/thanks-1.cms?msid="+romsid;
+    document.getElementById("FailureURL").value="http://timesofindia.indiatimes.com/userscomment/failure-1.cms?msid="+romsid;
+    document.getElementById("id").value=romsid;
+	document.getElementById("id1").value=romsid;
+}
+function mailtrim(mvalue){
+	var temp1 = mvalue;
+	var obj = /^(\s*)([\W\w]*)(\b\s*$)/;
+	if (obj.test(temp1)) { temp1 = temp1.replace(obj, '$2'); }
+	var obj = /  /g;
+	while (temp1.match(obj)) { temp1 = temp1.replace(obj, " "); }
+	return temp1;
+}
+function checkMail(inmail){ 
+	var x = inmail;
+	var y = 0;
+	var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	if (x.indexOf(',') != -1){  
+	    var seperatevalues = x.split(',');
+	    var xx=0; 
+	    for ( xx=0; xx<seperatevalues.length ; xx=xx+1){ 
+	        if (filter.test(seperatevalues[xx])) y = y + 1;
+	    }				  
+	    if (xx == y) return true;
+	    else return false;
+	}else{
+	    if (filter.test(x)) return true;
+	    else return false;
+	}
+}
+function validateForm(frmObj,palace,tmpUserName,tmpUserEmail,tmpUserLocn){
+
+var pattern_url = /(((http):\/\/)|(www))[-a-zA-Z0-9+&@#\/%?=~_|!:,.;]+[-a-zA-Z0-9+&@#\/%=~_|]/;
+var email_string = /([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})/;
+	if(mailtrim(tmpUserName)=="" || tmpUserName=="Name"){
+	    alert('Please enter your name.');frmObj.fromname.focus();return false;
+	}else if(mailtrim(tmpUserEmail)=="" || tmpUserEmail == "Email"){
+	    alert('Please enter your mail id.');frmObj.fromaddress.focus();return false;
+	}else if(checkMail(mailtrim(tmpUserEmail)) == false){ 
+        alert('Please enter a valid email address in - Your Email Address'); 
+	    frmObj.fromaddress.focus();return false;
+	}else if(mailtrim(tmpUserLocn)=="" || tmpUserLocn=="Location"){
+	    alert('Please enter your location.');frmObj.location.focus();return false;
+	}
+	else if(frmObj.message.value=="" || frmObj.message.value=="Your reply" || frmObj.message.value=="Your comment"){
+	    alert('Please enter your comment.');frmObj.message.focus();	return false;
+	}
+	else if(pattern_url.test(frmObj.message.value) == true){
+		alert("You can't post links in your comments.");frmObj.message.focus();	return false;
+	}
+	else if(email_string.test(frmObj.message.value) == true){
+		alert("You can't post email in your comments.");frmObj.message.focus();	return false;
+	}
+	else if(frmObj.name=="commentOnArticle" && document.getElementById("mathans1").innerHTML!=document.getElementById("mathuserans1").value){
+		alert("Please enter correct answer");frmObj.mathuserans1.focus();return false;
+	}
+	else if(frmObj.name=="commentOnComment" && document.getElementById("mathans2").innerHTML!=document.getElementById("mathuserans2").value){
+		alert("Please enter correct answer");frmObj.mathuserans2.focus();return false;
+	} 
+	/*else if(whoIam<1)
+	{ 
+		if(frmObj.name=="commentOnArticle" && document.getElementById("mathans1").innerHTML!=document.getElementById("mathuserans1").value){
+			alert("Please enter correct answer");frmObj.mathuserans1.focus();return false;
+		}
+		else if(frmObj.name=="commentOnComment" && document.getElementById("mathans2").innerHTML!=document.getElementById("mathuserans2").value){
+		alert("Please enter correct answer");frmObj.mathuserans2.focus();return false;
+		}
+	}*/
+
+    //putQueryStringInElement();
+    return true;		
+}
+function loyalitypoints()
+{
+try
+{
+var istrack5 = Get_Ckie('MSCSAuth');	
+if(istrack5!=null) 
+{
+log('sh_hk',navmsid);	
+}
+}catch(ex){}
+}
+
+
+
+
+function postCommAct(){
+	try{											
+		if(usersessionkey!=""){		
+			var frmpostSrc="http://timesofindia.indiatimes.com/fbpostcomment.cms?article="+postActUrl+"&access_token="+usersessionkey ;			
+			document.getElementById('fbartpost').src=frmpostSrc;
+		}
+	}
+	catch(ex){											
+	}
+}		
+
+
+
+
+function postRo(obj,frmObj,palace){
+
+try{
+	var tmpUserName="";
+	var tmpUserLastName="";
+	var tmpUserEmail="";
+	var tmpUserLocn="";
+	var decd="0";	
+	
+	if(Get_Ckie('MSCSAuthDetails')!=null)
+	{
+		if(username.indexOf('@')!=-1)
+		{
+			username= username.split('@')[0];			
+		}
+	}
+
+	if(Get_Ckie('articleid')!=null){
+		Delete_Ckie("articleid","/",".indiatimes.com");
+		Delete_Ckie("txtmsg","/",".indiatimes.com");
+	}
+	
+	if(userNameSFT=="" || userNameSFT==null){
+	tmpUserName=frmObj.fromname.value;
+		if(tmpUserName.indexOf(" ")!=-1){
+		tmpUserName= frmObj.fromname.value.split(' ')[0];
+		tmpUserLastName= frmObj.fromname.value.split(' ')[1];		
+		}	
+	}
+	else {	
+	tmpUserName=userNameSFT;
+		if(tmpUserName.indexOf(" ")!=-1){
+			tmpUserName= userNameSFT.split(' ')[0];
+			tmpUserLastName= userNameSFT.split(' ')[1];
+			
+		}	
+	}
+	
+	tmpUserName=trim(tmpUserName);
+	
+	
+	if(Get_Ckie('MSCSAuthDetails')!=null)
+	{
+		decd="1";
+		
+		if(username.indexOf('@')!=-1)
+		{		
+			tmpUserName=username.split('@')[0];
+			userNameSFT=username.split('@')[0];		
+		}
+	}	
+	else
+	{
+		decd="0";
+	}	
+
+	
+	if(userEmailSFT =="" || userEmailSFT==null) {	
+	tmpUserEmail=frmObj.fromaddress.value;
+	Set_Ckie("tfemail",tmpUserEmail,1,"/",".indiatimes.com","");
+	}
+	else {	
+	tmpUserEmail=userEmailSFT;
+	}
+	var tmpSSoUer="";
+	if(Get_Ckie('MSCSAuthDetails')!=null){
+		tmpSSoUer=Get_Ckie('MSCSAuthDetails').split('=')[1];
+		if(tmpSSoUer.indexOf('@')==-1){
+			tmpSSoUer=tmpSSoUer+"@indiatimes.com";
+		}
+							
+	}
+	if(decd=="1")
+	{	var tmpSso1="";
+							
+		if(Get_Ckie(tmpSSoUer+'~mypref')!=null)
+		{
+			
+			tmpSso1 = Get_Ckie(tmpSSoUer+'~mypref').split('~')[0];																																			
+			if(tmpSSoUer==userEmailSFT)
+			{	
+			
+				tmpfbauthimg=tmpSso1;
+			}									
+		}						
+		else
+		{
+		
+			var tmurl="/fbssoupdategetimg.cms?oauthid="+fbauthid;
+			populatefbImgN(tmurl,'fbimgvalidate');
+			setTimeout('Set_Ckie(tmpSSoUer+"~mypref",tmpfbauthimg,1,"/",".indiatimes.com","");',4000);									
+		}
+	}
+	else
+	{
+		tmpfbauthimg="0";								
+	}
+	
+	
+	var tmplocationval="";	
+	if(userLocnSFT=="" || userLocnSFT==null) {
+	tmpUserLocn=frmObj.location.value;
+		if(decd=="1"){
+			if(tmpUserLocn!="" && tmpUserLocn!=" " && tmpUserLocn!="Location")
+			{
+			tmplocationval=tmpSSoUer+"~"+tmpUserLocn;
+			Set_Ckie(tmpSSoUer+"~tflocation",tmplocationval,1,"/",".indiatimes.com","");
+			}
+		}
+	}
+	else {
+	tmpUserLocn=userLocnSFT;
+	}
+	
+
+    if(!validateForm(frmObj,palace,tmpUserName,tmpUserEmail,tmpUserLocn))return false;
+
+	
+
+    var xmlHttpObj;
+    if(window.XMLHttpRequest){ 			
+	    xmlHttpObj = new XMLHttpRequest(); 
+    }else if(window.ActiveXObject) { 			
+        xmlHttpObj = new ActiveXObject("Microsoft.XMLHTTP"); 
+    }
+	
+    var postUrl = '/postro.cms';
+	var messagetrunc=trim(frmObj.message.value);	
+	messagetrunc=unescape(encodeURIComponent(messagetrunc));
+	messagetrunc=escape(messagetrunc);
+
+	var postStr=""
+	if(userImgSFT=="")
+	{	
+		if(decd=="0")
+		{	
+    	postStr = 'fromname=' + frmObj.fromname.value
+                + '&fromaddress=' + tmpUserEmail
+                + '&location=' + tmpUserLocn 
+                + '&message=' + messagetrunc 
+                + '&roaltdetails=' + frmObj.roaltdetails.value
+                + '&ArticleID=' + frmObj.id.value 
+                + '&msid=' + frmObj.id.value 
+                + '&userid=qrst'
+                + '&parentid='+frmObj.parentid.value
+                + '&rootid='+frmObj.rootid.value
+				+ '&loggedstatus=0';
+		}
+		else
+		{
+			if(userNameSFT=="" || userNameSFT==null)
+			{	
+				postStr = 'fromname=' + frmObj.fromname.value
+				+ '&fromaddress=' + tmpUserEmail 
+                + '&location=' + tmpUserLocn 
+                + '&message=' + messagetrunc 
+                + '&roaltdetails=' + frmObj.roaltdetails.value
+                + '&ArticleID=' + frmObj.id.value 
+                + '&msid=' + frmObj.id.value 
+                + '&userid=' + tmpSSoUer
+                + '&parentid='+frmObj.parentid.value
+                + '&rootid='+frmObj.rootid.value
+				+ '&loggedstatus=1';
+				if(Get_Ckie('FaceBookEmail')!=null)
+				{
+					postStr+='&fbemailid='+Get_Ckie('FaceBookEmail');
+				}
+			}
+			else
+			{
+				postStr = 'fromname=' + username 
+                + '&fromaddress=' + tmpUserEmail 
+                + '&location=' + tmpUserLocn 
+                + '&message=' + messagetrunc 
+                + '&roaltdetails=' + frmObj.roaltdetails.value
+                + '&ArticleID=' + frmObj.id.value 
+                + '&msid=' + frmObj.id.value 
+                + '&userid=' + tmpSSoUer
+                + '&parentid='+frmObj.parentid.value
+                + '&rootid='+frmObj.rootid.value
+				+ '&loggedstatus=1';
+				if(Get_Ckie('FaceBookEmail')!=null)
+				{
+				postStr+='&fbemailid='+Get_Ckie('FaceBookEmail');
+				}
+			}			
+		}			
+	}
+	else {	
+		if(decd=="0")
+		{
+		
+		postStr = 'fromname=' + frmObj.fromname.value 
+                + '&fromaddress=' + tmpUserEmail 
+                + '&location=' + tmpUserLocn 
+                + '&message=' + messagetrunc 
+                + '&roaltdetails=' + frmObj.roaltdetails.value
+                + '&ArticleID=' + frmObj.id.value 
+                + '&msid=' + frmObj.id.value 
+                + '&userid=qrst'
+                + '&parentid='+frmObj.parentid.value
+                + '&rootid='+frmObj.rootid.value 				
+				+ '&loggedstatus=0';
+			}
+			else 
+			{
+			
+				if(tmpfbauthimg=="1")
+				{
+					if(userNameSFT=="" || userNameSFT==null){	
+						postStr = 'fromname=' + frmObj.fromname.value
+						+ '&fromaddress=' + tmpUserEmail 
+		                + '&location=' + tmpUserLocn 
+		                + '&message=' + messagetrunc 
+		                + '&roaltdetails=' + frmObj.roaltdetails.value
+		                + '&ArticleID=' + frmObj.id.value 
+		                + '&msid=' + frmObj.id.value 
+		                + '&userid=' + tmpSSoUer
+		                + '&parentid='+frmObj.parentid.value
+		                + '&rootid='+frmObj.rootid.value 
+						+ '&imageurl='+ userImgSFT
+						+ '&loggedstatus=1';	
+						if(Get_Ckie('FaceBookEmail')!=null)
+						{
+						postStr+='&fbemailid='+Get_Ckie('FaceBookEmail');
+						}
+					}
+					else {
+						postStr = 'fromname=' + username 
+						+ '&fromaddress=' + tmpUserEmail 
+		                + '&location=' + tmpUserLocn 
+		                + '&message=' + messagetrunc 
+		                + '&roaltdetails=' + frmObj.roaltdetails.value
+		                + '&ArticleID=' + frmObj.id.value 
+		                + '&msid=' + frmObj.id.value 
+		                + '&userid=' + tmpSSoUer
+		                + '&parentid='+frmObj.parentid.value
+		                + '&rootid='+frmObj.rootid.value 
+						+ '&imageurl='+ userImgSFT
+						+ '&loggedstatus=1';	
+						if(Get_Ckie('FaceBookEmail')!=null)
+						{
+							postStr+='&fbemailid='+Get_Ckie('FaceBookEmail');
+						}
+					}
+	                
+				}
+				else
+				{
+					if(userNameSFT=="" || userNameSFT==null)
+					{	
+						postStr = 'fromname=' + frmObj.fromname.value
+						+ '&fromaddress=' + tmpUserEmail 
+		                + '&location=' + tmpUserLocn 
+		                + '&message=' + messagetrunc 
+		                + '&roaltdetails=' + frmObj.roaltdetails.value
+		                + '&ArticleID=' + frmObj.id.value 
+		                + '&msid=' + frmObj.id.value 
+		                + '&userid=' + tmpSSoUer
+		                + '&parentid='+frmObj.parentid.value
+		                + '&rootid='+frmObj.rootid.value 					
+						+ '&loggedstatus=1';	
+						if(Get_Ckie('FaceBookEmail')!=null)
+						{
+						postStr+='&fbemailid='+Get_Ckie('FaceBookEmail');
+						}	
+					}
+					else 
+					{
+						postStr = 'fromname=' + username 
+		                + '&fromaddress=' + tmpUserEmail 
+		                + '&location=' + tmpUserLocn 
+		                + '&message=' + messagetrunc 
+		                + '&roaltdetails=' + frmObj.roaltdetails.value
+		                + '&ArticleID=' + frmObj.id.value 
+		                + '&msid=' + frmObj.id.value 
+		                + '&userid=' + tmpSSoUer
+		                + '&parentid='+frmObj.parentid.value
+		                + '&rootid='+frmObj.rootid.value 					
+						+ '&loggedstatus=1';	
+						if(Get_Ckie('FaceBookEmail')!=null)
+						{
+							postStr+='&fbemailid='+Get_Ckie('FaceBookEmail');
+						}	
+					}	                
+				}
+			}
+	}
+	
+	var glbltmpform=frmObj.name;
+	if(glbltmpform=="commentOnArticle")
+	{
+	var glbltmpformobj=frmObj.chkfb.checked;
+	var glbltmpformobj1=frmObj.chktwt.checked;
+	}
+	else
+	{
+	var glbltmpformobj2=frmObj.chkfb1.checked;
+	var glbltmpformobj3=frmObj.chktwt1.checked;
+	}
+    xmlHttpObj.open('POST', postUrl , true); 
+    xmlHttpObj.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');			
+    xmlHttpObj.send(postStr);
+    xmlHttpObj.onreadystatechange = function(){
+        if(xmlHttpObj.readyState == 4 && xmlHttpObj.status==200){
+		respText = xmlHttpObj.responseText;
+		var postCmnt = postStr.split('&');
+		for(i = 0; i < postCmnt.length; i++){
+		//alert(postCmnt[0].split('=')[1]);
+		var postCmnt_name = postCmnt[0].split('=')[1];
+		//var postCmnt_email = postCmnt[1].split('=')[1];
+		var postCmnt_loc = postCmnt[2].split('=')[1];
+		var postCmnt_msg = unescape(postCmnt[3].split('=')[1]);
+		}
+		
+		if(xmlHttpObj.responseText=="abusivelanguage"){
+				if(frmObj.name=="commentOnArticle"){
+					document.getElementById("dupli_abus").style.display="block";
+					document.getElementById("dupli_abus").innerHTML="<div style='text-align:center;color:#393939;font-size:18px;font-family:georgia;font-weight:bold'>You can't post this comment as it contains inappropriate content.</div>";
+					document.getElementById("postCmtIn1").style.display="none";
+					document.getElementById("postid").style.display = 'block';
+					document.commentOnArticle.reset();
+				}else{
+					document.getElementById("postCmtIn").innerHTML="<div style='text-align:center;color:#393939;font-size:18px;font-family:georgia;font-weight:bold'>You can't post this comment as it contains inappropriate content.</div>";
+					document.getElementById("postCmtIn").style.height="190px";
+				}
+		}
+		else if(xmlHttpObj.responseText=="duplicatecontent"){
+				if(frmObj.name=="commentOnArticle"){
+					document.getElementById("dupli_abus").style.display="block";
+					document.getElementById("dupli_abus").innerHTML="<div style='text-align:center;color:#393939;font-size:18px;font-family:georgia;font-weight:bold'>You can't post this comment as it is identical to the previous one.</div>";
+					document.getElementById("postCmtIn1").style.display="none";
+					document.getElementById("postid").style.display = 'block';
+					document.commentOnArticle.reset();	
+				}else{
+					document.getElementById("postCmtIn").innerHTML="<div style='text-align:center;color:#393939;font-size:18px;font-family:georgia;font-weight:bold'>You can't post this comment as it is identical to the previous one.</div>";
+					document.getElementById("postCmtIn").style.height="190px";
+				}
+		}
+			else{
+				var currObj=$(obj).parents('.cmtBox');
+				var lvl = currObj.attr("leveldepth");
+			if(isLoggedSso==null) 
+			{
+	             if(frmObj.name=="commentOnArticle"){										
+					document.getElementById("postCmtIn1").innerHTML="<div style='text-align:center;color:#393939;font-size:18px;font-family:georgia;font-weight:bold'><br/>Thank you<br/><span style='font-size:14px;font-weight:normal;line-height:18px;'>We appreciate you taking time to post your opinion on this article. You are just one step from<br/> signing up with The Times of India. <a href='javascript:javascript:scroll(0,0);loadPopup(14)'>Know more</a> about the benefits of signing up.<br/><br/>You might also like to read <a href='/opinions/"+ navmsid +".cms'>what others have to say</a> on this article.<br/><br/></span></div>";
+					document.getElementById("postCmtIn1").style.height="360px";		
+				}else{
+					document.getElementById("postCmtIn").innerHTML="<div style='text-align:center;color:#393939;font-size:18px;font-family:georgia;font-weight:bold'><br/>Thank you<br/><span style='font-size:14px;font-weight:normal;line-height:18px;'>We appreciate you taking time to post your opinion on this article. You are just one step from<br/> signing up with The Times of India.<a href='javascript:javascript:scroll(0,0);loadPopup(14)'>Know more</a> about the benefits of signing up.<br/><br/>You might also like to read <a href='/opinions/"+ navmsid +".cms'>what others have to say</a> on this article.<br/><br/></span></div>";
+					document.getElementById("postCmtIn").style.height="190px";
+				}
+			}
+			else {
+				var img_var = document.getElementById('profileimg2');
+				var imgSource = img_var.src;
+				var alreadyfollow = currObj.find("[alreadyfollow]");
+				//var lvl_new = alreadyfollow.attr("alreadyfollow");
+				if(frmObj.name=="commentOnArticle") {
+					dv = document.createElement('div'); // create dynamically div tag
+					dv.setAttribute('style',"background:#EDF2F5;margin:5px 0 10px; padding:5px");
+					dv.innerHTML="<div style='color: #000000;'><img height='40' align='left' width='40' src="+imgSource+" style='margin-right:5px;cursor:pointer;'/><a href='http://mytimes.indiatimes.com/' style='color: #336797;font-size: 11px;font-weight: bold;'>"+F_LN+"</a> ("+postCmnt_loc+") </div><div style='font-size: 13px;color: #000000;width:570px;float:left;word-wrap:break-word'>"+postCmnt_msg+"</div><div style='clear:both'></div>";
+					document.getElementById("newpostCmtIn").appendChild(dv);
+					document.getElementById("newpostCmtIn").style.borderBottom="1px dotted gray";
+					document.getElementById("postCmtIn1").style.display="none";
+					document.getElementById("dupli_abus").style.display="none";
+					document.getElementById("postid").style.display = 'block';
+					document.commentOnArticle.reset();
+				}else {
+					dv = document.createElement('div'); // create dynamically div tag
+						if(lvl==1){
+						dv.setAttribute('style',"padding-left:33px;background:#EDF2F5;width:597px;border-top: 1px dotted gray;margin-bottom: 5px;padding-bottom: 5px;");
+						}
+						else if(lvl==2){
+						dv.setAttribute('style',"padding-left:54px;background:#EDF2F5;width:576px;border-top: 1px dotted gray;margin-bottom: 5px;padding-bottom: 5px;");
+						}
+						else if(lvl==3){
+						dv.setAttribute('style',"padding-left:64px;background:#EDF2F5;width:566px;border-top: 1px dotted gray;margin-bottom: 5px;padding-bottom: 5px;");
+						}
+						else if(lvl >= 4){
+						dv.setAttribute('style',"padding-left:72px;background:#EDF2F5;width:556px;border-top: 1px dotted gray;margin-bottom: 5px;padding-bottom: 5px;");
+						}
+						else{
+						dv.setAttribute('style',"background:#EDF2F5;width:630px;border-top: 1px dotted gray;margin-bottom: 5px;padding-bottom: 5px;");
+						}
+					dv.innerHTML="<img height='40' align='left' width='40' src="+imgSource+" style='margin:6px 5px 0 0;cursor:pointer;'/><div style='color: #000000;'><a href='http://mytimes.indiatimes.com/' style='color:#336797;font-size: 11px;font-weight: bold;font-family: arial;'>"+F_LN+"</a><span class='location' style='font-weight:normal;font-size:11px;'> ("+postCmnt_loc+") <div style='font-size: 13px;color: #000000;display:block;'>"+postCmnt_msg+"</div></div>";
+					currObj.append(dv);
+					closeMe();
+				}
+				//Badgeville.credit('Post Comments');
+			}	
+		}	
+		}
+	}
+	
+	
+	if(decd=="1"){	
+		
+		if(userNameSFT=="" || userLocnSFT=="")
+		{
+			
+			if(tmpUserLastName!=""){	
+				urlStg="http://timesofindia.indiatimes.com/fbssoupdate.cms?emailid="+tmpUserEmail+"&firstname="+tmpUserName+"&lastname="+tmpUserLastName+"&city="+tmpUserLocn;
+			}
+			else {
+				urlStg="http://timesofindia.indiatimes.com/fbssoupdate.cms?emailid="+tmpUserEmail+"&firstname="+tmpUserName+"&city="+tmpUserLocn;
+			}
+			
+			document.getElementById('fbssoupd').src=urlStg;
+			
+		}		
+		
+	}
+	postCommAct();		
+	var cmtarea=frmObj.message.value;	 
+	Delete_Ckie("fbcheck","/",".indiatimes.com");
+	Delete_Ckie("twtcheck","/",".indiatimes.com");
+	Delete_Ckie("usercomt","/",".indiatimes.com");
+	
+	if(Get_Ckie('fbook_id')==null) {	
+	Set_Ckie("notfbloggedin","1",1,"/",".indiatimes.com","");
+	}
+	if(Get_Ckie('tweet_id')==null) {	
+	Set_Ckie("nottwtloggedin","1",1,"/",".indiatimes.com","");
+	}
+	
+	 if(glbltmpform=="commentOnArticle")
+	 {	 	 		
+
+			if(glbltmpformobj==true) 
+			{
+				
+				Set_Ckie("fbcheck","1",1,"/",".indiatimes.com","");					
+				Set_Ckie("usercomt",cmtarea,1,"/",".indiatimes.com","");
+				if(Get_Ckie('MSCSAuth')!=null)
+				{				
+				setTimeout(function(){callPost()},2000);
+				//callPost();
+				//log('sh_fb',navmsid);
+				}
+				else
+				{				
+				callPublish(cmtarea,null);					
+				}
+				
+			}
+			if(glbltmpformobj1==true)
+			{
+				
+				Set_Ckie("twtcheck","1",1,"/",".indiatimes.com","");				
+				Set_Ckie("usercomt",cmtarea,1,"/",".indiatimes.com","");
+				if(Get_Ckie('MSCSAuth')!=null)
+				{		
+					setTimeout(function(){callPost()},2000);		
+					//callPost();
+					//log('sh_tw',navmsid);
+				}
+				else
+				{	
+					var cmtarea1="";
+					if(cmtarea.length>100)cmtarea1=cmtarea.substring(0,99);
+					else cmtarea1=cmtarea;
+					getshortenURL(document.location.href,cmtarea1);			
+					//var twtCUrl="https://twitter.com/share?text="+cmtarea+"&url="+document.location.href;
+					//sigintwtCfb = window.open (twtCUrl,"sigintwtCfb","location=1,status=1,scrollbars=1,width=750,height=500");
+				 	//sigintwtCfb.moveTo(275,275);				
+					
+				}
+				
+			}
+			
+	 }
+	 else
+	 {
+	 		if(glbltmpformobj2==true) 
+			{
+				
+				Set_Ckie("fbcheck","1",1,"/",".indiatimes.com","");					
+				Set_Ckie("usercomt",cmtarea,1,"/",".indiatimes.com","");
+				if(Get_Ckie('MSCSAuth')!=null)
+				{				
+				setTimeout(function(){callPost()},2000);
+				//callPost();	
+				//log('sh_fb',navmsid);
+				}
+				else
+				{
+				
+				callPublish(cmtarea,null);					
+				}
+				
+			}
+			if(glbltmpformobj3==true)
+			{
+				
+				Set_Ckie("twtcheck","1",1,"/",".indiatimes.com","");				
+				Set_Ckie("usercomt",cmtarea,1,"/",".indiatimes.com","");
+				if(Get_Ckie('MSCSAuth')!=null)
+				{				
+					setTimeout(function(){callPost()},2000);
+					//callPost();
+					//log('sh_tw',navmsid);
+				}
+				else
+				{		
+					var cmtarea1="";
+					if(cmtarea.length>100)cmtarea1=cmtarea.substring(0,99);
+					else cmtarea1=cmtarea;
+					getshortenURL(document.location.href,cmtarea1);		
+					//var twtCUrl="https://twitter.com/share?text="+cmtarea+"&url="+document.location.href;
+					//sigintwtCfb = window.open (twtCUrl,"sigintwtCfb","location=1,status=1,scrollbars=1,width=750,height=500");
+				 	//sigintwtCfb.moveTo(275,275);				
+					
+				}
+				
+			}
+	 }
+	 }
+	 catch(ex)
+	 {
+		
+	 }	
+}
+	var respText;
+	function callPost(){
+	
+	  try {
+			if(respText!="abusivelanguage" && respText!="duplicatecontent"){
+		  		var fbUrl="";
+				var twtUrl="";
+			  	fbUrl="/stgredirectpagetest.cms";			
+				myfb = window.open (fbUrl,"myfb","location=1,status=1,scrollbars=0,width=600,height=230");
+			  	myfb.moveTo(250,240);
+			}
+	}
+	catch(ex) {
+		
+		}
+	} 
+
+
+
+
+var cmtFormOpen='0';
+function showCmtBox(cmtid,pcmtid,yt){
+try{
+	if(cmtFormOpen!='0'){
+
+		if(yt=='1')
+		{
+			if( document.getElementById("postcmtformnw"+cmtFormOpen)!=null)document.getElementById("postcmtformnw"+cmtFormOpen).innerHTML="";
+			if( document.getElementById("postcmtform"+cmtFormOpen)!=null)document.getElementById("postcmtform"+cmtFormOpen).innerHTML="";
+		}
+		else{
+		 if( document.getElementById("postcmtform"+cmtFormOpen)!=null) document.getElementById("postcmtform"+cmtFormOpen).innerHTML="";
+		 if( document.getElementById("postcmtformnw"+cmtFormOpen)!=null)document.getElementById("postcmtformnw"+cmtFormOpen).innerHTML="";
+		 }
+	}	
+	if(pcmtid==''){
+		pcmtid='0';
+	}	
+	cmtFormOpen=cmtid;
+	if(yt=='1'){
+	
+	document.getElementById("postcmtformnw" + cmtid).style.cssText="width:590px;position:absolute;z-index:10000 !important;";	
+	document.getElementById("postcmtformnw" + cmtid).innerHTML=document.getElementById("postcmtform").innerHTML;
+	
+	
+	}
+	else{
+	document.getElementById("postcmtform"+cmtid).style.cssText="width:590px;position:absolute;z-index:10000 !important;";	
+	document.getElementById("postcmtform"+cmtid).innerHTML=document.getElementById("postcmtform").innerHTML;	
+	}
+	//document.getElementById("ff").focus();	
+	document.getElementById("message").focus();	
+	document.getElementById("parentid").value=cmtid;
+	document.getElementById("rootid").value=pcmtid;
+	
+	if(fbauthid!='F')
+	{
+		//Fb Mapping exists
+		document.getElementById("chkfb1").checked="true";
+	}
+	
+	putMathQ('2');	
+	replyCmt();
+	}
+	catch(ex){}
+	
+}
+function replyCmt()
+			{
+				try
+				{
+				var ssoUname1="";
+				var isLoggedtmpSSO1="";
+				if(whoIam>0)
+						{
+						
+							var validBr=0;
+							var validWidth=0;
+							//document.getElementById("loginlay20").style.display="none";
+							//document.getElementById("loginlay21").style.display="none";
+							//document.getElementById("mathq2").style.display="none";
+							
+							//document.getElementById("mathuserans2").style.display="none";
+							isLoggedtmpSSO1 = Get_Ckie('MSCSAuthDetails');
+						
+											
+							ssoUname1=userNameSFT;
+						
+							if(ssoUname1.indexOf('@')!=-1){
+								ssoUname1=ssoUname1.split('@');
+								ssoUname1=ssoUname1[0];
+								}
+								else {
+								ssoUname1="";
+								}
+							
+									
+								if(userNameSFT=="" || userNameSFT==null){		
+						
+									document.getElementById('fromname1').style.display="inline";
+									document.getElementById('nameTxt1').style.display="inline-block";
+									if(username.indexOf('@')!=-1)
+									{
+										username = username.split('@')[0];			
+									}
+									document.getElementById('fromname1').value=username;									
+									validWidth=1;
+								}
+								else 
+								{
+								
+									if(ssoUname1!="")
+									{	
+										document.getElementById('fromname1').style.display="inline";
+										document.getElementById('fromname1').value=ssoUname1;
+										document.getElementById('nameTxt1').style.display="inline-block";
+										if(username.indexOf('@')!=-1)
+										{
+											username = username.split('@')[0];			
+										}
+										document.getElementById('fromname1').value=username;
+										validWidth=1;								
+									}
+									else 
+									{
+										document.getElementById('fromname1').style.display="none";
+										document.getElementById('nameTxt1').style.display="none";
+										validWidth=validWidth+1;							
+										validBr=1;
+									}
+								}
+						
+								if(userEmailSFT=="" || userEmailSFT==null)
+								{							
+									document.getElementById('fromaddress1').style.display="inline";
+									document.getElementById('emailTxt1').style.display="inline-block";
+									validWidth=validWidth+1;
+
+								}
+								else 
+								{							
+									document.getElementById('fromaddress1').style.display="none";
+									document.getElementById('emailTxt1').style.display="none";
+									validWidth=validWidth+2;
+									validBr=validBr+1;
+									if(validBr>1)
+									{								
+										document.getElementById('tpremovebr1').style.display="none";
+										document.getElementById('tpremovebr2').style.display="none";
+										//document.getElementById('removebr2').style.display="none";
+									}
+									else 
+									{
+										document.getElementById('tpremovebr1').style.display="inline";
+										document.getElementById('tpremovebr2').style.display="inline";
+										//document.getElementById('removebr2').style.display="inline";
+									}								
+								}
+						
+								if(validWidth=="3")
+								{
+									//document.forms['commentOnComment'].elements['message'].style.width="520px";
+								}
+								else
+								{
+									//document.forms['commentOnComment'].elements['message'].style.width="338px";
+								}
+								
+								var tmpLoc="";
+								var tmpSSoUer1=Get_Ckie('MSCSAuthDetails').split('=')[1];
+								if(tmpSSoUer1.indexOf('@')==-1){
+								tmpSSoUer1=tmpSSoUer1+"@indiatimes.com";
+								}							
+								var tmpLocVal="";
+								
+								if(Get_Ckie(tmpSSoUer1+'~tflocation')!=null && Get_Ckie(tmpSSoUer1+'~tflocation')!="" && Get_Ckie(tmpSSoUer1+'~tflocation')!=" ")
+								{
+									tmpLoc = Get_Ckie(tmpSSoUer1+'~tflocation').split('~')[0];
+									tmpLocVal = Get_Ckie(tmpSSoUer1+'~tflocation').split('~')[1];								
+										if(tmpSSoUer1==tmpLoc){
+									
+											userLocnSFT=tmpLocVal;
+										}
+										else {
+									
+										Delete_Ckie(userEmailSFT+"~tflocation","/",".indiatimes.com");
+										}
+								}
+								else if(validWidth=="2"){
+									//document.getElementById('fromaddress1').style.width="384px";							
+									//document.getElementById('fromaddress1').style.marginLeft="1px";
+							
+								}
+								else 
+								{
+									//document.forms['commentOnComment'].elements['fromname'].style.width="190px";
+									//document.forms['commentOnComment'].elements['fromaddress'].style.width="190px";
+								}
+									
+								if(userLocnSFT=="" || userLocnSFT==null)
+								{														
+									document.getElementById('location1').style.display="inline";
+									document.getElementById('locationTxt1').style.display="inline-block";
+								}
+								else 
+								{							
+									document.getElementById('location1').style.display="none";
+									document.getElementById('locationTxt1').style.display="none";
+									//document.forms['commentOnComment'].elements['fromaddress'].style.marginLeft="24px";							
+								}							
+						
+						}
+						}
+						catch(ex)
+						{
+						
+						}
+				}
+function fillformdetail(params,cmtid)
+{
+try {
+
+var isLoggedfill = Get_Ckie('MSCSAuth');
+var usernamefill=Get_Ckie('MSCSAuthDetails').split('=')[1];
+	var usernamefill1=Get_Ckie('MSCSAuthDetail').split('~');
+	var usernamefill2=usernamefill1[4];	
+	var usernamefill3=usernamefill2.split('=')[1];	
+if(isLoggedfill != "" || isLoggedfill != null)
+	{
+			 document.getElementById("chkfb").checked="true";
+			if(usernamefill.indexOf('@') == -1)
+			{tmpstrfill=usernamefill+'@indiatimes.com';}
+			else{tmpstrfill=usernamefill;}
+			
+			if(params==1)
+			{
+			document.commentOnArticle.fromaddress.value=tmpstrfill;
+			if(usernamefill3=="null"){
+			if(tmpstrfill.indexOf('@') == -1)document.commentOnArticle.fromname.value=tmpstrfill;
+			else document.commentOnArticle.fromname.value=tmpstrfill.split('@')[0];
+			}
+			else{document.commentOnArticle.fromname.value=usernamefill3;}
+			//document.getElementById("mathuserans1").value=document.getElementById("mathans1").innerHTML;			
+			//document.getElementById("loginlay1").style.display="none";
+			//document.getElementById("loginlay").style.display="none";
+			//document.getElementById("mathuserans1").style.display="none";	
+			}	
+			if(params==2)
+			{
+			document.getElementById("fromaddress").value=tmpstrfill;			
+			
+			if(usernamefill3=="null"){
+			if(tmpstrfill.indexOf('@') == -1)document.getElementById("fromname").value=tmpstrfill;
+			else document.getElementById("fromname").value=tmpstrfill.split('@')[0];
+			}
+			else{document.getElementById("fromname").value=usernamefill3;}
+			document.getElementById("mathuserans2").value=document.getElementById("mathans2").innerHTML;
+			document.getElementById("loginlay21").style.display="none";
+			document.getElementById("loginlay20").style.display="none";
+			document.getElementById("loginlay22").style.display="none";
+			document.getElementById("mathuserans2").style.display="none";	
+			}	
+	}
+	}catch(ex){}
+
+	
+}
+var tmpfbauthimg="";
+function populatefbImgN(urlval,divval){
+try{				
+
+
+var xmlhttp=false;
+var status=0;				
+xmlhttp = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+if (xmlhttp){	
+xmlhttp.onreadystatechange=function(){
+if (xmlhttp.readyState==4){
+if (xmlhttp.status==200)
+{				
+	var recordSet="";
+	document.getElementById(divval).innerHTML=xmlhttp.responseText;
+	tmpfbauthimg=document.getElementById('showimage').value;
+	
+	
+}
+else if (xmlhttp.status==404) status=0
+else status=0}}
+xmlhttp.open("GET",urlval,true);
+xmlhttp.send(null);
+}}catch (e){xmlhttp = false; }}
+var palace="";
+var objid="";
+function SubmitComment(obj,objid,palace){
+	try {	
+	var formObj = document.getElementById(objid);
+	postRo(obj,formObj,palace);
+	}
+	catch(ex){	
+	}
+}
+
+function putMathQ(palace){
+	var f = Math.floor(Math.random()*10);
+	var s = Math.floor(Math.random()*6);	
+	var o = Math.floor(Math.random()*2);
+	//if(f<10){f=f+10}
+	var str="";
+	str=f+" + "+s;
+	document.getElementById("mathans"+palace).innerHTML=eval(str);
+	str = str + " = ";
+	document.getElementById("mathq"+palace).innerHTML=str;	
+}
+
+
+function remainingChar(cobj,divid){
+	var x = cobj.value.length;
+	if(eval("3000-"+x)<0){
+		cobj.value =  cobj.value.substring(0,3000);
+		alert("You have entered more than 3000 characters");
+		document.getElementById(divid).innerHTML=eval("0");
+		return false;
+	}
+	document.getElementById(divid).innerHTML=eval("3000-"+x);
+}
+function makeBlank(obj,defMsg){
+	if(obj.value==defMsg){
+		obj.value="";
+	}
+}
+function fillDefValue(obj,defMsg){
+	if(obj.value==""){
+		obj.value=defMsg;
+	}
+}
+function closeMe(){
+	if(document.getElementById("postcmtform"+cmtFormOpen)!=null)
+	document.getElementById("postcmtform"+cmtFormOpen).innerHTML="";
+	if(document.getElementById("postcmtformnw"+cmtFormOpen)!=null)
+	document.getElementById("postcmtformnw"+cmtFormOpen).innerHTML="";
+}
+function trim(str)
+				{
+				    if(!str || typeof str != 'string')
+				        return null;
+
+				    return str.replace(/^[\s]+/,'').replace(/[\s]+$/,'').replace(/[\s]{2,}/,' ');
+				}
+
+
+                    
+		

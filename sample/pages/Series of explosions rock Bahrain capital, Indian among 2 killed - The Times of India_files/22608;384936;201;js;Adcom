@@ -1,0 +1,16 @@
+
+var ftGUID_384936="1674F10E010E3D";
+var ftConfID_384936="0";
+var ftParams_384936="click=http://r1.ace.advertising.com/click/site=0000800700/mnum=0001314164/cstr=7373175=_509864ad,6284443504,800700_1314164_1183_0,1_/xsxdata=$XSXDATA/bnum=7373175/optn=64?trg=&ftx=&fty=&ftadz=&ftscw=&ft_custom=&cachebuster=737704.6148758382";
+var ftKeyword_384936="";
+var ftCustom_384936="";
+var ftSection_384936="";
+var ftSegment_384936="";
+var ftSegmentList_384936=[];
+var ftRuleMatch_384936="0";
+var ftTimestamp_384936="1352164537";
+var ftImp384936 = {};
+ftImp384936.privacy = "x";
+
+document.write('<scr'+'ipt src="http://cdn.flashtalking.com/xre/38/384936/397324/js/j-384936-397324.js" id="ftscript_m384936" name="ftscript_m384936"></scr'+'ipt>');
+                    

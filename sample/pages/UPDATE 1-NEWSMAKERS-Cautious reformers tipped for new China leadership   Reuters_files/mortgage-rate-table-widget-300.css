@@ -1,0 +1,52 @@
+﻿
+    a {color:#004276;cursor:pointer;text-decoration:underline;}
+	a:visited {color:#004276;}
+	a:hover {color:#DEA001;}
+	a:focus {outline:none;}
+	
+	.br-rate-red-container {background: url(http://affiliate-center.bankrate.com/system/img/red-container.gif) 0px 0px no-repeat; width: 300px; height: 250px; padding: 6px 7px; font-family: arial; font-size: 12px; text-align:left}
+    .br-rate-boxhead:link, .br-rate-boxhead:visited {font-weight: bold; color: #ffffff!important; margin-bottom: 15px; margin-top: 0px;display:block;text-decoration:none;}
+    .br-rate-boxhead:hover {font-weight: bold; color: #ffffff!important; margin-bottom: 15px; margin-top: 0px;display:block;text-decoration:underline;}
+    .br-rate-location:link, .br-rate-location:visited {color: #ae4f00!important; font-weight: bold; margin-top: 0px;display:block;text-decoration:none;}
+    .br-rate-location:hover {color: #ae4f00!important; font-weight: bold; margin-top: 0px;display:block;text-decoration:underline;}
+    .br-rate-red-container .br-rate-table {margin-top: 5px; font-size: 10px;}
+    .br-rate-red-container .br-rate-table td {border-bottom: 1px solid #ae4f00; padding: 4px 0px;}
+    .br-rate-red-container td a, .br-rate-red-container td a:link, .br-rate-red-container td a:active, .br-rate-red-container td a:visited {color: #002b80; text-decoration: none;}
+    .br-rate-red-container td a:hover {color: #dda100; text-decoration: underline;}
+    .br-rate-table-rate {color: #ae4f00; font-weight: bold; font-size: 20px;}
+    .br-rate-table-product {font-size: 11px; font-weight: bold;}
+    .br-rate-table-last {font-size: 11px; margin: 0px; font-weight: bold; color: #484848;}
+    .br-rate-table-localize {background: #f9f3ed; border-bottom: 1px solid #ae4f00; padding: 5px 4px;}
+    .br-rate-red-container .br-rate-table input {width: 95px; border: 1px solid #6d3100; font-size: 11px; font-family: arial; margin: 0px 0px 0px 5px;}
+    .br-rate-red-container .footer-links {float: right; font-size: 11px; text-decoration: none; margin: 1px 15px 0px 0px;}
+    .br-rate-red-container .attr1 {margin:10px 0px 0px;}
+    .br-rate-red-container .attr {margin:3px 0px 0px;}
+    
+    .br-rate-green-container {background: url(http://affiliate-center.bankrate.com/system/img/green-container.gif) 0px 0px no-repeat; width: 300px; height: 250px; padding: 6px 7px; font-family: arial; font-size: 12px;}
+    .br-rate-green-container .br-rate-boxhead:link, .br-rate-green-container .br-rate-boxhead:visited {font-weight: bold; color: #ffffff; margin-bottom: 2px; margin-top: 0px;display:block;text-decoration:none;text-align:center;padding-right:20px;}
+    .br-rate-green-container .br-rate-boxhead:hover {font-weight: bold; color: #ffffff; margin-top: 0px;display:block;text-decoration:underline; }
+    .br-rate-green-container .br-rate-location:link, .br-rate-green-container .br-rate-location:visited {color: #ffffff!important; font-weight: bold;text-decoration:none; margin-bottom: 5px; text-align:center;padding-right:20px;font-size:13px;}
+    .br-rate-green-container .br-rate-location:hover {color: #ffffff!important; font-weight: bold;text-decoration:underline; }
+    .br-rate-green-container .br-rate-location:focus, .br-rate-green-container .br-rate-boxhead:focus {outline:none;}
+    .br-rate-green-container .br-rate-table {margin-top: 2px; font-size: 10px; height:176px;}
+    .br-rate-table-green {color: #099318; height:auto; line-height:11px; margin-top:3px;}      
+    .br-rate-green-container .br-rate-table-rate {color: #099318; font-weight: bold; font-size: 20px;}
+    .br-rate-table-product {font-size: 11px; font-weight: bold;}
+    .br-rate-table-footer-link {float: right; font-size: 11px; text-decoration: none; margin: 6px 15px 0px 0px;}
+    .br-rate-green-container .details-link {margin: 4px 0px 5px 0px; padding:0px 0px 0px 0px; font-size:10px; line-height:7px; }    
+    ul.footer-links {list-style-type: none; margin: 2px 0px 0px 2px; padding: 0px;}
+    ul.footer-links li {float: left; margin-right: 10px; margin-top:2px;}
+    ul.footer-links a, ul.footer-links a:visited {background: url(http://affiliate-center.bankrate.com/system/img/green-square.gif) 0px 50% no-repeat; width:4px; height: 4px; padding-left: 10px; font-size: 11px; text-decoration: none;}
+    ul.footer-links a:hover {text-decoration:underline;}    
+    .br-rate-green-container .footer-logo {float: left;  margin:5px 0px 0px 25px;}
+    .br-rate-green-container .br-rate-table {}
+    .br-rate-green-container .br-rate-table tr td {border-bottom: 0.1em solid #0ba11c;padding: 0px; margin:0px auto;}
+
+    .mini-apr-rate-bold{font-size: 9px;color: #000000;font-family: arial;}
+    .mini-apr-rate{font-size:10px; font-weight:normal;color: #000000;}
+    .mini-apr{font-size:10px; font-weight:normal;color: #000000;  }
+    .BankrateFCC_mini-button-small {background: url(http://www.bankrate.com/images/free-content/widget-sprite.gif) -514px -2px no-repeat; height: 21px; width: 75px; color: #000000; font-weight: bold; font-size: 11px; margin: 5px auto;}
+    .BankrateFCC_mini-button-small div{color: #000000; font-weight: bold; font-size: 11px; text-transform: none; padding: 2px 0px 0px 0px; text-align: center; background-color: inherit;}
+    .BankrateFCC_mini-button-small div, .BankrateFCC_mini-button-small div a, .BankrateFCC_mini-button-small div a:visited {color: #000000; font-weight: bold; font-size: 11px; text-transform: none; padding: 3px 0px 0px 0px; text-align: center; text-decoration: none; background-color: inherit;}
+
+     

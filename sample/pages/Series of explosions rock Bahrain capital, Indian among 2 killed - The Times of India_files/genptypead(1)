@@ -1,0 +1,1 @@
+var str="titlebar=yes,toolbar=yes,scrollbars=yes,status=yes,resizable=yes,controls=yes,location=yes,topmargin=0,leftmargin=0,left=0,width=640,height=480";win2=window.open('http://ads.indiatimes.com/ads.dll/popserv?slotid=2384&msid=17046468&cid=23867&mstype=2','adspopfpage',str);if(win2!=null){win2.blur();}window.focus();

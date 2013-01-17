@@ -1,0 +1,53 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = "site"; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=Csj5PU2iYULz1Ga--6gGi5YCYA7SDtPYC5I-t4T-mxarLBBABIJCyygsoA1DBtfPx_v____8BYMmGo4fUo4AQoAG2yt_rA8gBAakC9LEUf55jqz6oAwGqBJwBT9CEZRyuXI-H7uJWZHynNGpHbfYxBkfRE3vby3eebYJ0b15eGFcxwr5spxgRh0PswrhF79yPP1v0fwCAL9DkegCCAek1rB-U3tenNdtmfQfvbhEMW41KuBZmInyMnLU9RtvbdFX8hMQ-BpshceAw6WNCWjtguvZZtvD5dQQF2O6UosDgwM0bmpHSv2B2BwGMUI9RRs2N4HtUoXKNiAYB&amp;num=1&amp;cid=5GiDX5QVvHZG-rbw-LpNHbSe&amp;sig=AOD64_1KpqYiwWRN6YqSt9Li6xb5gst_mg&amp;client=ca-pub-3578014945201864&amp;adurl=http://ucla.nus.edu"; 
+google_ad.visible_url = "ucla.nus.edu"; 
+google_ad.line1 = "UCLA - NUS Executive MBA"; 
+google_ad.line2 = "UCLA-NUS EMBA Washington Info Event"; 
+google_ad.line3 = "On Nov 6 2012. Register Online Now!"; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 2; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=ChgaoU2iYULz1Ga--6gGi5YCYA7DjpfECqImL-TXY9-fsDRACIJCyygsoA1C6xMuNBmDJhqOH1KOAEKABvKWD9wPIAQGoAwGqBJ4BT9Dkcua3Rra_XFFYHHynbTZQffcgEUaMXnfZfKzNV550axRLGA8xwucwsAgQllTtn_VJ7Z7BLF3pdQ-JZc3mewOfH-krsxqOhNH5c8Vkaw_yN0wTWIhXpRx2fDiBrbMsVsymDSD58ctHBJoicuAx7NaAWfqqvIKv01yJUFothsbwoqTglstNnIDWs2SDBAGIpYiERe2NAH0WQ3lz6nWIBgE&amp;num=2&amp;cid=5GiDX5QVvHZG-rbw-LpNHbSe&amp;sig=AOD64_0MoZ0xz1-7iIR8gB6b1W0iaQqytw&amp;client=ca-pub-3578014945201864&amp;adurl=http://info.rocketmatter.com/google-ppc-lfot-ad%3Futm_campaign%3DGoogle-LFOT-Ad"; 
+google_ad.visible_url = "www.rocketmatter.com/free-book"; 
+google_ad.line1 = "Free E-Book for Lawyers"; 
+google_ad.line2 = "The Law Firm of Tomorrow"; 
+google_ad.line3 = "Download your copy now!"; 
+google_ad.regionname = ""; 
+google_ads[1] = google_ad; 
+google_ad = new Object(); 
+google_ad.n = 3; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=CN7UMU2iYULz1Ga--6gGi5YCYA_29lN4Czd7Vqz_xvq6_GBADIJCyygsoA1CKi-zX-_____8BYMmGo4fUo4AQoAGH-bL_A8gBAagDAaoEnQFP0NQ12LdHtr9cUVgcfKdtNlB99yARRoxed9l8rM1XnnRrFEsYDzHC5zCwCBCWVO2f9UntnsEsXel1D4llzeZ7A58f6SuzGo6E0flzxWRrD_I3TBNYiFelHHZ8OIGtsyxWzKYNIPnxy0cEmiJy4DHs1oBZ-qq8gq-mZa53Wi2GxvCipOCWy02cgNazZIMEAYiliIRF7Y0AfRZDOBtYiAYB&amp;num=3&amp;cid=5GiDX5QVvHZG-rbw-LpNHbSe&amp;sig=AOD64_0i1BLOEnLJv9r-Vtbm1HA__kf-6g&amp;client=ca-pub-3578014945201864&amp;adurl=http://www.cybersource.com/landing/NA/%3Fsc%3DGDN-Topics-NA%26se%3DGoogle_Content%26kw%3D%23global_payments"; 
+google_ad.visible_url = "www.CyberSource.com/Global-Payments"; 
+google_ad.line1 = "Global Payment Solutions"; 
+google_ad.line2 = "Accept Payment from 190+ Countries."; 
+google_ad.line3 = "Learn more w/ Global Payment Guide."; 
+google_ad.regionname = ""; 
+google_ads[2] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://www.reuters.com/article/2012/11/05/us-kuwait-politics-idUSBRE8A41DK20121105%26gl%3DUS%26hl%3Den%26client%3Dca-pub-3578014945201864%26ai0%3DCsj5PU2iYULz1Ga--6gGi5YCYA7SDtPYC5I-t4T-mxarLBBABIJCyygsoA1DBtfPx_v____8BYMmGo4fUo4AQoAG2yt_rA8gBAakC9LEUf55jqz6oAwGqBJwBT9CEZRyuXI-H7uJWZHynNGpHbfYxBkfRE3vby3eebYJ0b15eGFcxwr5spxgRh0PswrhF79yPP1v0fwCAL9DkegCCAek1rB-U3tenNdtmfQfvbhEMW41KuBZmInyMnLU9RtvbdFX8hMQ-BpshceAw6WNCWjtguvZZtvD5dQQF2O6UosDgwM0bmpHSv2B2BwGMUI9RRs2N4HtUoXKNiAYB%26ai1%3DChgaoU2iYULz1Ga--6gGi5YCYA7DjpfECqImL-TXY9-fsDRACIJCyygsoA1C6xMuNBmDJhqOH1KOAEKABvKWD9wPIAQGoAwGqBJ4BT9Dkcua3Rra_XFFYHHynbTZQffcgEUaMXnfZfKzNV550axRLGA8xwucwsAgQllTtn_VJ7Z7BLF3pdQ-JZc3mewOfH-krsxqOhNH5c8Vkaw_yN0wTWIhXpRx2fDiBrbMsVsymDSD58ctHBJoicuAx7NaAWfqqvIKv01yJUFothsbwoqTglstNnIDWs2SDBAGIpYiERe2NAH0WQ3lz6nWIBgE%26ai2%3DCN7UMU2iYULz1Ga--6gGi5YCYA_29lN4Czd7Vqz_xvq6_GBADIJCyygsoA1CKi-zX-_____8BYMmGo4fUo4AQoAGH-bL_A8gBAagDAaoEnQFP0NQ12LdHtr9cUVgcfKdtNlB99yARRoxed9l8rM1XnnRrFEsYDzHC5zCwCBCWVO2f9UntnsEsXel1D4llzeZ7A58f6SuzGo6E0flzxWRrD_I3TBNYiFelHHZ8OIGtsyxWzKYNIPnxy0cEmiJy4DHs1oBZ-qq8gq-mZa53Wi2GxvCipOCWy02cgNazZIMEAYiliIRF7Y0AfRZDOBtYiAYB\x26usg\x3dAFQjCNEOcP-eiH-G-QBQ4_wl-ItEbYqBoA";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

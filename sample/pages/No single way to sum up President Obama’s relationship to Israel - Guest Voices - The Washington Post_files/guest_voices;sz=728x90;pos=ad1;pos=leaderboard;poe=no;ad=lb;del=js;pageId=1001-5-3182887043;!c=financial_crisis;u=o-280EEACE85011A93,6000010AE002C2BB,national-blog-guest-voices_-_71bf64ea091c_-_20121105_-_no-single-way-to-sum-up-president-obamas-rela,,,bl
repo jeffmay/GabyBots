@@ -1,0 +1,114 @@
+document.write('<!-- Copyright 2008 DoubleClick, a division of Google Inc. All rights reserved. -->\r\n<!-- Code auto-generated on Thu Oct 25 18:08:13 EDT 2012 -->\r\n<script src=\"http://s0.2mdn.net/879366/flashwrite_1_2.js\"><\/script>');document.write('\r\n');
+
+function DCFlash(id,pVM){
+var swf = "http://s0.2mdn.net/3863694/MDMFE_question6_flash_banner_728x90_c2.swf";
+var gif = "http://s0.2mdn.net/3863694/MDMFE_question6_banner_728x90_c2.jpg";
+var minV = 10;
+var FWH = ' width="728" height="90" ';
+var url = escape("http://ad.doubleclick.net/click%3Bh%3Dv8/3d25/3/0/%2a/r%3B264478934%3B2-0%3B0%3B90123361%3B3454-728/90%3B51105695/51075463/1%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eaopt%3D0/ff/ff/ff%3B%7Efdr%3D264495371%3B0-0%3B0%3B67679603%3B3454-728/90%3B51127523/51097201/1%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eokv%3D%3Bsz%3D728x90%3Bpos%3Dad1%3Bpos%3Dleaderboard%3Bpoe%3Dno%3Bad%3Dlb%3Bdel%3Djs%3BpageId%3D1001-5-3182887043%3B%21c%3Dfinancial_crisis%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eaopt%3D2/1/ff/1%3B%7Esscs%3D%3fhttp://marylandersformarriageequality.org/why-marriage/?utm_source=Per&utm_medium=banner&utm_term=WaPo-ROS-DC&utm_content=C2-728x90&utm_campaign=MDFME-Per&source=PER_banner_WaPo_ROS-DC_C2-728x90");
+var fscUrl = url;
+var fscUrlClickTagFound = false;
+var wmode = "opaque";
+var bg = "";
+var dcallowscriptaccess = "never";
+
+var openWindow = "false";
+var winW = 0;
+var winH = 0;
+var winL = 0;
+var winT = 0;
+
+var moviePath=swf.substring(0,swf.lastIndexOf("/"));
+var sm=new Array();
+
+
+var defaultCtVal = escape("http://ad.doubleclick.net/click%3Bh%3Dv8/3d25/3/0/%2a/r%3B264478934%3B2-0%3B0%3B90123361%3B3454-728/90%3B51105695/51075463/1%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eaopt%3D0/ff/ff/ff%3B%7Efdr%3D264495371%3B0-0%3B0%3B67679603%3B3454-728/90%3B51127523/51097201/1%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eokv%3D%3Bsz%3D728x90%3Bpos%3Dad1%3Bpos%3Dleaderboard%3Bpoe%3Dno%3Bad%3Dlb%3Bdel%3Djs%3BpageId%3D1001-5-3182887043%3B%21c%3Dfinancial_crisis%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eaopt%3D2/1/ff/1%3B%7Esscs%3D%3fhttp://marylandersformarriageequality.org/why-marriage/?utm_source=Per&utm_medium=banner&utm_term=WaPo-ROS-DC&utm_content=C2-728x90&utm_campaign=MDFME-Per&source=PER_banner_WaPo_ROS-DC_C2-728x90");
+var ctp=new Array();
+var ctv=new Array();
+ctp[0] = "clickTag";
+ctv[0] = "";
+ctp[1] = "clickTag";
+ctv[1] = "";
+
+
+var fv='"moviePath='+moviePath+'/'+'&moviepath='+moviePath+'/';
+for(i=1;i<sm.length;i++){if(sm[i]!=""){fv+="&submovie"+i+"="+escape(sm[i]);}}
+for(var ctIndex = 0; ctIndex < ctp.length; ctIndex++) {
+  var ctParam = ctp[ctIndex];
+  var ctVal = ctv[ctIndex];
+  if(ctVal != null && typeof(ctVal) == 'string') {
+    if(ctVal == "") {
+      ctVal = defaultCtVal;
+    }
+    else {
+      ctVal = escape("http://ad.doubleclick.net/click%3Bh%3Dv8/3d25/3/0/%2a/r%3B264478934%3B2-0%3B0%3B90123361%3B3454-728/90%3B51105695/51075463/1%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eaopt%3D0/ff/ff/ff%3B%7Efdr%3D264495371%3B0-0%3B0%3B67679603%3B3454-728/90%3B51127523/51097201/1%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eokv%3D%3Bsz%3D728x90%3Bpos%3Dad1%3Bpos%3Dleaderboard%3Bpoe%3Dno%3Bad%3Dlb%3Bdel%3Djs%3BpageId%3D1001-5-3182887043%3B%21c%3Dfinancial_crisis%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eaopt%3D2/1/ff/1%3B%7Esscs%3D%3f" + ctVal);
+    }
+    if(ctParam.toLowerCase() == "clicktag") {
+      fscUrl = ctVal;
+      fscUrlClickTagFound = true;
+    }
+    else if(!fscUrlClickTagFound) {
+      fscUrl = ctVal;
+    }
+    fv += "&" + ctParam + "=" + ctVal;
+  }
+}
+fv+='"';
+var bgo=(bg=="")?"":'<param name="bgcolor" value="#'+bg+'">';
+var bge=(bg=="")?"":' bgcolor="#'+bg+'"';
+function FSWin(){if((openWindow=="false")&&(id=="DCF0"))alert('openWindow is wrong.');
+var dcw = 800;
+var dch = 600;
+// IE
+if(!window.innerWidth)
+{
+  // strict mode
+  if(!(document.documentElement.clientWidth == 0))
+  {
+    dcw = document.documentElement.clientWidth;
+    dch = document.documentElement.clientHeight;
+  }
+  // quirks mode
+  else if(document.body)
+  {
+    dcw = document.body.clientWidth;
+    dch = document.body.clientHeight;
+  }
+}
+// w3c
+else
+{
+  dcw = window.innerWidth;
+  dch = window.innerHeight;
+}
+if(openWindow=="center"){winL=Math.floor((dcw-winW)/2);winT=Math.floor((dch-winH)/2);}window.open(unescape(fscUrl),id,"width="+winW+",height="+winH+",top="+winT+",left="+winL+",status=no,toolbar=no,menubar=no,location=no");}this.FSWin = FSWin;
+ua=navigator.userAgent;
+if(minV<=pVM&&(openWindow=="false"||(ua.indexOf("Mac")<0&&ua.indexOf("Opera")<0))){
+	var adcode='<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="'+id+'"'+FWH+'>'+
+		'<param name="movie" value="'+swf+'"><param name="flashvars" value='+fv+'><param name="quality" value="high"><param name="wmode" value="'+wmode+'"><param name="base" value="'+swf.substring(0,swf.lastIndexOf("/"))+'"><PARAM NAME="AllowScriptAccess" VALUE="'+dcallowscriptaccess+'">'+bgo+
+		'<embed src="'+swf+'" flashvars='+fv+bge+FWH+' type="application/x-shockwave-flash" quality="high" swliveconnect="true" wmode="'+wmode+'" name="'+id+'" base="'+swf.substring(0,swf.lastIndexOf("/"))+'" AllowScriptAccess="'+dcallowscriptaccess+'"></embed></object>';
+  if(('j'!="j")&&(typeof dclkFlashWrite!="undefined")){dclkFlashWrite(adcode);}else{document.write(adcode);}
+}else{
+	document.write('<a target="_blank" href="'+unescape(url)+'"><img src="'+gif+'"'+FWH+'border="0" alt="Advertisement" galleryimg="no"></a>');
+}}
+function getFlashVersion(){
+// code derived from SWFObject (http://code.google.com/p/swfobject/)
+ var vfv = "0,0,0";
+ try {
+ try {
+   var axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+     try {axo.AllowScriptAccess = "always"; }catch(e) {return "6";}
+ }catch(e) {}
+ vfv = new ActiveXObject("ShockwaveFlash.ShockwaveFlash").GetVariable("$version");}
+ catch(e) {
+   try {if(navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin){vfv= navigator.plugins["Shockwave Flash"].description;}}
+   catch(e) {}
+ }
+ return vfv.replace(/\D+/g, ",").match(/^,?(.+),?$/)[1].split(',').shift();
+}
+var DCid=(isNaN("264478934"))?"DCF2":"DCF264478934";
+var pVM=getFlashVersion();
+eval("function "+DCid+"_DoFSCommand(c,a){if(c=='openWindow')o"+DCid+".FSWin();}o"+DCid+"=new DCFlash('"+DCid+"',pVM);");
+//-->
+
+document.write('\r\n<noscript><a target=\"_blank\" href=\"http://ad.doubleclick.net/click%3Bh%3Dv8/3d25/3/0/%2a/r%3B264478934%3B2-0%3B0%3B90123361%3B3454-728/90%3B51105695/51075463/1%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eaopt%3D0/ff/ff/ff%3B%7Efdr%3D264495371%3B0-0%3B0%3B67679603%3B3454-728/90%3B51127523/51097201/1%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eokv%3D%3Bsz%3D728x90%3Bpos%3Dad1%3Bpos%3Dleaderboard%3Bpoe%3Dno%3Bad%3Dlb%3Bdel%3Djs%3BpageId%3D1001-5-3182887043%3B%21c%3Dfinancial_crisis%3Bu%3Do%2A280EEACE85011A93%2C6000010AE002C2BB%2Cnational%3Ablog%3Aguest-voices_-_71bf64ea091c_-_20121105_-_no-single-way-to-sum-up-president-obamas-rela%2C%2C%2Cblog%2Cabc%3B%7Eaopt%3D2/1/ff/1%3B%7Esscs%3D%3fhttp://marylandersformarriageequality.org/why-marriage/?utm_source=Per&utm_medium=banner&utm_term=WaPo-ROS-DC&utm_content=C2-728x90&utm_campaign=MDFME-Per&source=PER_banner_WaPo_ROS-DC_C2-728x90\"><img src=\"http://s0.2mdn.net/3863694/MDMFE_question6_banner_728x90_c2.jpg\" width=\"728\" height=\"90\" border=\"0\" alt=\"Advertisement\" galleryimg=\"no\"></a></noscript>\r\n');

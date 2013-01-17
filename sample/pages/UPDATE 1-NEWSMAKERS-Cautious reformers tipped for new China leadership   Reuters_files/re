@@ -1,0 +1,1 @@
+if (typeof Reuters.tns.updateRecommendations === 'function') {Reuters.tns.updateRecommendations([]);}

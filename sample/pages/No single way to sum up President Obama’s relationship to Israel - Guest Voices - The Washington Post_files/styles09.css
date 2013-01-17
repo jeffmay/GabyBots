@@ -1,0 +1,35 @@
+#blog_content .sidebar .top {padding-bottom:10px;background:none;}
+
+#blog_content .bottom {background:none;}
+#blog_content .sidebar .box {background:none;border-bottom:1px solid #ccc;}
+
+#blog_content .sidebar li {
+background: none;
+list-style-image: url(http://views.washingtonpost.com/leadership/ol_bullet.gif);
+margin: 0px 0px 0px 8px;
+padding: 0px 0px 0.5em;
+}
+
+#blog_content .top {padding-bottom:10px;}
+
+#blog_content .sidebar .top .title {
+border-right: 1px solid #CCC;
+border-top: 1px solid #CCC;
+border-left: 1px solid #CCC;
+height: 20px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-top: 5px;
+width: 143px;
+background: url(http://media.washingtonpost.com/wp-srv/images/league/sidebarkicker_bg.gif) repeat;
+color: #828529;
+font-family: arial;
+font-size: 11px;
+font-weight: bold;
+left: 0pt;
+text-align: left;
+text-transform: uppercase;
+top: 3px;
+}
+
+#blog_content #all-link ul {padding-bottom:10px;}

@@ -1,0 +1,308 @@
+
+var pgid = new Array();
+
+pgid['asPostCom']= 'showArt';
+pgid['asEmailArt']= 'showArt';
+pgid['asPrintAr']= 'showArt';
+pgid['asSaveArt']= 'showArt';
+pgid['asReduceFS']= 'showArt';
+pgid['asIncreaseFS']= 'showArt';
+pgid['asHotklix']= 'showArt';
+pgid['asMessenger']= 'showArt';
+pgid['asStumbleUpon']= 'showArt';
+pgid['asYahooBuz']= 'showArt';
+pgid['asDigg']= 'showArt';
+pgid['asReditt']= 'showArt';
+pgid['asMore']= 'showArt';
+pgid['asMoreGoogleBM']= 'showArt';
+pgid['asMoreNewsvine']= 'showArt';
+pgid['asMoreLiveBM']= 'showArt';
+pgid['asMoreTechnorati']= 'showArt';
+pgid['asMoreYahooBM']= 'showArt';
+pgid['asMoreBlogmarks']= 'showArt';
+pgid['asMoreDelicious']= 'showArt';
+pgid['asMoreApnaC']= 'showArt';
+pgid['asMoreClose']= 'showArt';
+
+pgid['asArticleTab']= 'showArt';
+pgid['asComments']= 'showArt';
+pgid['asReadm1']= 'showArt';
+pgid['asReadm2']= 'showArt';
+pgid['asReadm3']= 'showArt';
+pgid['asReadm4']= 'showArt';
+pgid['asReadm5']= 'showArt';
+pgid['asReadm6']= 'showArt';
+pgid['asReadm7']= 'showArt';
+pgid['asReadm8']= 'showArt';
+pgid['asReadm9']= 'showArt';
+pgid['asReadm10']= 'showArt';
+pgid['asFBshare']= 'showArt';
+pgid['asFBsharebox']= 'showArt';
+pgid['asTweet']= 'showArt';
+pgid['asTweetbox']= 'showArt';
+pgid['asGplus1']= 'showArt';
+pgid['asGplus1box']= 'showArt';
+pgid['asCommentB']= 'showArt';
+pgid['asCommentbox']= 'showArt';
+pgid['asStoryPic']= 'showArt';
+pgid['asStoryVid']= 'showArt';
+pgid['asSeephotos']= 'showArt';
+
+pgid['asPosCom']= 'showArt';
+pgid['asFolTop']= 'showArt';
+
+pgid['asPostComBot']= 'showArt';
+pgid['asEmailArtBot']= 'showArt';
+pgid['asPrintArtBot']= 'showArt';
+pgid['asSaveArtBot']= 'showArt';
+pgid['asReduceFSBot']= 'showArt';
+pgid['asIncreaseFSBot']= 'showArt';
+pgid['asTwitter']= 'showArt';
+pgid['asPrevLink']= 'showArt';
+pgid['asNextLink']= 'showArt';
+pgid['asPrevLinkS']= 'showArt';
+pgid['asNextLinkS']= 'showArt';
+pgid['asRelArt1']= 'showArt';
+pgid['asRelArt2']= 'showArt';
+pgid['asRelArt3']= 'showArt';
+pgid['asRelArt4']= 'showArt';
+pgid['asRelArt5']= 'showArt';
+pgid['asRelVid1']= 'showArt';
+pgid['asRelVid2']= 'showArt';
+pgid['asRelVid3']= 'showArt';
+pgid['asRelVid4']= 'showArt';
+pgid['asRelVid5']= 'showArt';
+pgid['RelBlog1']= 'showArt';
+pgid['RelBlog2']= 'showArt';
+pgid['RelBlog3']= 'showArt';
+pgid['RelBlog4']= 'showArt';
+pgid['RelBlog5']= 'showArt';
+pgid['RelBlog6']= 'showArt';
+pgid['RelBlog7']= 'showArt';
+
+pgid['asROcnt']= 'showArt';
+pgid['asROpostI']= 'showArt';
+pgid['asROpostL']= 'showArt';
+pgid['asROsortNew']= 'showArt';
+pgid['asROsortOld']= 'showArt';
+pgid['asROsortRecom']= 'showArt';
+pgid['asROsortMostDis']= 'showArt';
+pgid['asROsortAgree']= 'showArt';
+
+pgid['asROsortDisAgree']= 'showArt';
+pgid['asROagree']= 'showArt';
+pgid['asROdisagree']= 'showArt';
+pgid['asROrecom']= 'showArt';
+pgid['asROoffens']= 'showArt';
+pgid['asROreply']= 'showArt';
+pgid['asPYCfb']= 'showArt';
+pgid['asPYCtw']= 'showArt';
+pgid['asPYCm']= 'showArt';
+pgid['asPOCpcomm']= 'showArt';
+
+pgid['asLatestnTS']= 'showArt';
+pgid['asLatestnTS1']= 'showArt';
+pgid['asLatestnTS2']= 'showArt';
+pgid['asLatestnTS2']= 'showArt';
+pgid['asLatestnTS3']= 'showArt';
+pgid['asLatestnTS4']= 'showArt';
+pgid['asLatestnTS5']= 'showArt';
+pgid['asLatestnTS6']= 'showArt';
+pgid['asLatestnTSmore']= 'showArt';
+pgid['asLatestnTSrss']= 'showArt';
+pgid['asLatestnEW']= 'showArt';
+pgid['asLatestnEW1']= 'showArt';
+pgid['asLatestnEW2']= 'showArt';
+pgid['asLatestnEW3']= 'showArt';
+pgid['asLatestnEW4']= 'showArt';
+pgid['asLatestnEW5']= 'showArt';
+pgid['asLatestnEW6']= 'showArt';
+pgid['asLatestnEWmore']= 'showArt';
+pgid['asLatestnEWrss']= 'showArt';
+
+pgid['asRead']= 'showArt';
+pgid['asReadTS']= 'showArt';
+pgid['asReadTS1']= 'showArt';
+pgid['asReadTS2']= 'showArt';
+pgid['asReadTS3']= 'showArt';
+pgid['asReadTS4']= 'showArt';
+pgid['asReadTS5']= 'showArt';
+pgid['asReadTSmore']= 'showArt';
+pgid['asReadTSrss']= 'showArt';
+pgid['asReadEW']= 'showArt';
+pgid['asReadEW1']= 'showArt';
+pgid['asReadEW2']= 'showArt';
+pgid['asReadEW3']= 'showArt';
+pgid['asReadEW4']= 'showArt';
+pgid['asReadEW5']= 'showArt';
+pgid['asReadEWmore']= 'showArt';
+pgid['asReadEWrss']= 'showArt';
+
+pgid['asComm']= 'showArt';
+pgid['asCommTS']= 'showArt';
+pgid['asCommTS1']= 'showArt';
+pgid['asCommTS2']= 'showArt';
+pgid['asCommTS3']= 'showArt';
+pgid['asCommTS4']= 'showArt';
+pgid['asCommTS5']= 'showArt';
+pgid['asCommTSmore']= 'showArt';
+pgid['asCommTSrss']= 'showArt';
+pgid['asCommEW']= 'showArt';
+pgid['asCommEW1']= 'showArt';
+pgid['asCommEW2']= 'showArt';
+pgid['asCommEW3']= 'showArt';
+pgid['asCommEW4']= 'showArt';
+pgid['asCommEW5']= 'showArt';
+pgid['asCommEWmore']= 'showArt';
+pgid['asCommEWrss']= 'showArt';
+
+pgid['asShared']= 'showArt';
+pgid['asSharedTS']= 'showArt';
+pgid['asSharedTS1']= 'showArt';
+pgid['asSharedTS2']= 'showArt';
+pgid['asSharedTS3']= 'showArt';
+pgid['asSharedTS4']= 'showArt';
+pgid['asSharedTS5']= 'showArt';
+pgid['asSharedTSmore']= 'showArt';
+pgid['asSharedTSrss']= 'showArt';
+pgid['asSharedEW']= 'showArt';
+pgid['asSharedEW1']= 'showArt';
+pgid['asSharedEW2']= 'showArt';
+pgid['asSharedEW3']= 'showArt';
+pgid['asSharedEW4']= 'showArt';
+pgid['asSharedEW5']= 'showArt';
+pgid['asSharedEWmore']= 'showArt';
+pgid['asSharedEWrss']= 'showArt';
+
+pgid['asVideos']= 'showArt';
+pgid['asVideosPic1']= 'showArt';
+pgid['asVideosPic2']= 'showArt';
+pgid['asVideosPic3']= 'showArt';
+pgid['asVideosPic4']= 'showArt';
+pgid['asVideosPic5']= 'showArt';
+pgid['asVideos1']= 'showArt';
+pgid['asVideos2']= 'showArt';
+pgid['asVideos3']= 'showArt';
+pgid['asVideos4']= 'showArt';
+pgid['asVideos5']= 'showArt';
+pgid['asVideosmore']= 'showArt';
+pgid['asVideosrss']= 'showArt';
+
+pgid['asCityMain']= 'showArt';
+pgid['asCity1']= 'showArt';
+pgid['asCity2']= 'showArt';
+pgid['asCity3']= 'showArt';
+pgid['asIndMain']= 'showArt';
+pgid['asInd1']= 'showArt';
+pgid['asInd2']= 'showArt';
+pgid['asInd3']= 'showArt';
+pgid['asWorMain']= 'showArt';
+pgid['asWor1']= 'showArt';
+pgid['asWor2']= 'showArt';
+pgid['asWor3']= 'showArt';
+pgid['asBuzMain']= 'showArt';
+pgid['asBuz1']= 'showArt';
+pgid['asBuz2']= 'showArt';
+pgid['asBuz3']= 'showArt';
+pgid['asEntMain']= 'showArt';
+pgid['asEnt1']= 'showArt';
+pgid['asEnt2']= 'showArt';
+pgid['asEnt3']= 'showArt';
+pgid['asNRIMain']= 'showArt';
+pgid['asNRI1']= 'showArt';
+pgid['asNRI2']= 'showArt';
+pgid['asNRI3']= 'showArt';
+pgid['asLifeMain']= 'showArt';
+pgid['asLif1']= 'showArt';
+pgid['asLif2']= 'showArt';
+pgid['asLif3']= 'showArt';
+pgid['asSpoMain']= 'showArt';
+pgid['asSpo1']= 'showArt';
+pgid['asSpo2']= 'showArt';
+pgid['asSpo3']= 'showArt';
+
+
+pgid['asShoptab']= 'showArt';
+pgid['asShoppic']= 'showArt';
+pgid['asShop1']= 'showArt';
+pgid['asShopBuy']= 'showArt';
+pgid['asShopmo']= 'showArt';
+pgid['asMobtab']= 'showArt';
+pgid['asMobpic']= 'showArt';
+pgid['asMob1']= 'showArt';
+pgid['asMobBuy']= 'showArt';
+pgid['asMobmo']= 'showArt';
+pgid['asNRIStab']= 'showArt';
+pgid['asNRISpic']= 'showArt';
+pgid['asNRIS1']= 'showArt';
+pgid['asNRISBuy']= 'showArt';
+pgid['asNRISmo']= 'showArt';
+pgid['asChkStarhp']= 'showArt';
+
+pgid['showRecEng1']= 'showRecEng';
+pgid['showRecEng2']= 'showRecEng';
+pgid['showRecEng3']= 'showRecEng';
+pgid['showRecEng4']= 'showRecEng';
+
+pgid['fBollyL1']= 'FeaturedBoll';
+pgid['fBollyP1']= 'FeaturedBoll';
+pgid['fBollyL2']= 'FeaturedBoll';
+pgid['fBollyP2']= 'FeaturedBoll';
+pgid['fBollyL3']= 'FeaturedBoll';
+pgid['fBollyP3']= 'FeaturedBoll';
+pgid['fBollyL4']= 'FeaturedBoll';
+pgid['fBollyP4']= 'FeaturedBoll';
+pgid['fBollyL5']= 'FeaturedBoll';
+pgid['fBollyP5']= 'FeaturedBoll';
+pgid['fBollyM']= 'FeaturedBoll';
+
+pgid['fEnterL1']= 'FeaturedEnt';
+pgid['fEnterP1']= 'FeaturedEnt';
+pgid['fEnterL2']= 'FeaturedEnt';
+pgid['fEnterP2']= 'FeaturedEnt';
+pgid['fEnterL3']= 'FeaturedEnt';
+pgid['fEnterP3']= 'FeaturedEnt';
+pgid['fEnterL4']= 'FeaturedEnt';
+pgid['fEnterP4']= 'FeaturedEnt';
+pgid['fEnterL5']= 'FeaturedEnt';
+pgid['fEnterP5']= 'FeaturedEnt';
+pgid['fEnterM']= 'FeaturedEnt';
+
+pgid['fNewsL1']= 'FeaturedNews';
+pgid['fNewsL2']= 'FeaturedNews';
+pgid['fNewsL3']= 'FeaturedNews';
+pgid['fNewsL4']= 'FeaturedNews';
+pgid['fNewsL5']= 'FeaturedNews';
+pgid['fNewsM']= 'FeaturedNews';
+
+
+
+function pgtrack(pgatt)
+{
+	if(pgatt != null)
+	{
+		var pgat = pgatt.split('#');
+		var trcode = null;		
+		if(pgat.length==1)
+		{
+			trcode = "_gaq.push(['_trackEvent','"+pgid[pgat[0]]+"','select','"+pgat[0]+"'])";
+			
+				
+		}
+		else
+		{
+			trcode = "_gaq.push(['_trackEvent','"+pgid[pgat[0]]+"','select','"+pgat[0]+pgat[1]+"'])";
+			
+		}
+		eval(trcode);
+		
+
+	}
+	
+}
+
+
+
+
+
+		

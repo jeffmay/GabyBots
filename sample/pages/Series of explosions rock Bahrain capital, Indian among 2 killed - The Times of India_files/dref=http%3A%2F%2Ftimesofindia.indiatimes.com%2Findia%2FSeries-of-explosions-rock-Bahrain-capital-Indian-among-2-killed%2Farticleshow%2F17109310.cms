@@ -1,0 +1,8 @@
+document.write("<img src=\"http://bannerfarm.ace.advertising.com/bannerfarm/279/CSG_TWW_MKT_20080513_01 _photo_728x90.jpg\" border=\"0\">");
+var can_adInfoTag = {};
+can_adInfoTag["6178715464"] = {
+    "CAN_ver": "0.1",
+    "CAN_ann": "Advertising.com",
+    "CAN_anl": "http://advertising.aol.com/privacy/advertisingcom/opt-out",
+    "CAN_maf": "Y"
+};

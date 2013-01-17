@@ -1,0 +1,426 @@
+
+		function popup1(url,w,h) 
+					{
+			 var width  = w;
+			 var height = h;
+			 var left   = (screen.width  - width)/2;
+			 var top    = (screen.height - height)/2;
+			 var params = 'width='+width+', height='+height;
+			 params += ', top='+top+', left='+left;
+			 params += ', directories=no';
+			 params += ', location=no';
+			 params += ', menubar=no';
+			 params += ', resizable=yes';
+			 params += ', scrollbars=no';
+			 params += ', status=no';
+			 params += ', toolbar=no';
+			 newwin=window.open(url,'windowname5', params);
+			 if (window.focus) {newwin.focus()}
+			 return false;
+			}
+		var txtVersion = "1.1";
+		var addtoInterval = null;
+		var popupWin = '';
+	function intervalMgr(){
+	if(/Safari/i.test(navigator.userAgent)){ //Test for Safari
+		var addtoInterval=setInterval(function(){
+  		if(/loaded|complete/.test(document.readyState)){
+			clearInterval(addtoInterval)
+			closeAddTo() 
+  		}}, 1000)
+	}
+	else{var addtoInterval = setInterval("closeAddTo();",1000);}
+}
+function addtoWin(addtoFullURL)
+{
+	if (!popupWin.closed && popupWin.location){
+		popupWin.location.href = addtoFullURL;
+		intervalMgr();
+	}
+	else{
+		popupWin = window.open(addtoFullURL);
+		if (!popupWin.opener) popupWin.opener = self;
+		intervalMgr();
+	}
+	if (window.focus) {popupWin.focus()}
+	return false;
+}
+function closeAddTo() {
+
+	if (!popupWin.closed && popupWin.location){
+		if (popupWin.location.href == AddURL)	
+		popupWin.close();
+	}
+	else {
+		clearInterval(addtoInterval)
+		return true
+	}
+}
+			
+			function addto(addsite){
+			
+		switch(addsite){
+		case 0:	//	Itimes
+			var AddSite = "http://www.addtobookmarks.com/socialbookmarking.htm?";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";	
+			var AddOtherVars1 = "";
+			break	
+		case 1:	//	Delicious
+		//alert("case1")
+			var AddSite = "http://del.icio.us/post?";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";	
+			break
+		case 2:	//	Facebook		  
+			var AddSite = "http://www.facebook.com/sharer.php?";
+			var AddUrlVar = "u";
+			var AddTitleVar = "t";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";	
+			var AddOtherVars1 = "";	
+			break
+		case 3:	//	Stumble Upon
+			var AddSite = "http://www.stumbleupon.com/submit?";
+			var AddUrlVar = "url";
+			var AddTitleVar =  "title";
+			var AddNoteVar =  "";
+			var AddReturnVar =  "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		case 4:	//	Newsvine
+	
+			var AddSite = "http://www.newsvine.com/_tools/user/login?redirect";
+			var AddUrlVar = "url";
+			var AddTitleVar = "t";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";	
+			var AddOtherVars1 = "";
+			break
+		case 5:	//	Technorati
+			var AddSite = "http://technorati.com/signup/?f=favorites";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";	
+			var AddOtherVars1 = "";
+			break
+		case 6:	//	YahooBookmark
+			var AddSite = "http://e.my.yahoo.com/config/edit_bookmark?.src=bookmarks&.folder=1&.name=";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		case 7:	//	GoogleBookmark
+			var AddSite = "http://www.google.com/bookmarks/mark?op=add&";
+			var AddUrlVar = "bkmk";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		case 8:	//	Digg
+			var AddSite = "http://digg.com/submit?phase=2&";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		case 9:	//	MyIndiatimes
+			var AddSite = "http://my.indiatimes.com/";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		case 10:	//	Furl
+			var AddSite = "http://www.furl.net/storeIt.jsp?u=";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		
+		case 11:	//	YahooMyWeb
+			var AddSite = "http://myweb.yahoo.com/myresults/bookmarklet?&";
+			var AddUrlVar = "u";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		
+		case 12:	//	Reddit
+			var AddSite = "http://reddit.com/submit?";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		
+		case 13:	//	Live Bookmarks
+			var AddSite = "http://favorites.live.com/quickadd.aspx?";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		case 14:	//	MyAol
+			var AddSite = "http://www.spurl.net/spurl.php?";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "blocked";
+			var AddReturnVar = "";
+			var AddOtherVars = "&v=3";
+			var AddOtherVars1 = "";
+			break
+	
+    	case 15:	//	BolgMarks
+			var AddSite = "http://blogmarks.net/my/new.php?mini=1&simple=1&title=";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "";
+			var AddReturnVar = "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "";
+			break
+		
+		case 16:	//	Viggo
+			var AddSite = "http://www.spurl.net/spurl.php?";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "blocked";
+			var AddReturnVar = "";
+			var AddOtherVars = "&v=3";
+			var AddOtherVars1 = "";
+			break
+			
+		case 17:	//	FreeRang
+			var AddSite = "http://www.spurl.net/spurl.php?";
+			var AddUrlVar = "url";
+			var AddTitleVar = "title";
+			var AddNoteVar = "blocked";
+			var AddReturnVar = "";
+			var AddOtherVars = "&v=3";
+			var AddOtherVars1 = "";
+			break
+		case 18:	 //	hotklix
+			var AddSite = "http://hotklix.com/?ref=share_this&";
+			var AddUrlVar = "addurl";
+			var AddTitleVar =  "title";
+			var AddNoteVar =  "";
+			var AddReturnVar =  "";
+			var AddOtherVars = "";		
+			var AddOtherVars1 = "";	
+			break
+
+		case 19:   //  Yahoo Buzz                       
+           var AddSite = "http://buzz.yahoo.com/submit?";                       
+           var AddUrlVar = "submitUrl";                       
+           var AddTitleVar = "submitHeadline";
+           var AddNoteVar = "";
+           var AddReturnVar = "";
+           var AddOtherVars = "submitSummary";
+		   var AddOtherVars1 = "";
+           break
+
+		case 20:	 //	Apna Circle
+			var AddSite = "http://www.apnacircle.com/shareit/share/?";
+			var AddUrlVar = "url";
+			var AddTitleVar =  "title";
+			var AddNoteVar =  "overview";
+			var AddReturnVar =  "";
+			var AddOtherVars = "";
+			var AddOtherVars1 = "urllanguage";				
+			break
+		
+		//	To add more bookmarking sites, find the posting URL, identify the variable names, and create another case statement
+		default:
+	}
+//	Build the URL
+	//alert(AddURL);alert(AddTitle);alert(AddOthers1);
+	var addtoFullURL = AddSite + AddUrlVar + "=" + AddURL + "&" + AddTitleVar + "=" + AddTitle ;
+	if (AddOtherVars != "") 
+	{
+	addtoFullURL=addtoFullURL + "&" + AddOtherVars + "=" + AddOthers
+	}
+	if (AddOtherVars1 != "") 
+	{
+	addtoFullURL=addtoFullURL +  "&" + AddOtherVars1 + "=" + AddOthers1
+	}
+	if (AddNoteVar != "") 
+		{
+		var addtoFullURL = addtoFullURL + "&" + AddNoteVar + "=" + AddTitle;
+		//alert(ddtoFullURL)
+		}
+	//alert(addtoFullURL);
+	if (AddReturnVar != "")
+		{
+			
+		var addtoFullURL = addtoFullURL + "&" + AddReturnVar + "=" + AddURL;}
+//	Checking AddToMethod, to see if it opens in new window or not
+	switch(addtoMethod){
+		case 0:	// 0=direct link
+		
+			self.location = addtoFullURL
+			break
+		case 1:	// 1=popup
+		   	addtoWin(addtoFullURL);
+			break
+		default:	
+		}
+		Badgeville.credit('Share on Other Social Platforms');
+		//return true;
+}
+var dropdowncontent={
+	disableanchorlink: true,
+	 hidedivmouseout: [true, 200], 
+	ajaxloadingmsg: "Loading content. Please wait...",
+	ajaxbustcache: true,
+
+	getposOffset:function(what, offsettype){
+		return (what.offsetParent)? what[offsettype]+this.getposOffset(what.offsetParent, offsettype) : what[offsettype]
+	},
+
+	isContained:function(m, e){
+		var e=window.event || e
+		var c=e.relatedTarget || ((e.type=="mouseover")? e.fromElement : e.toElement)
+		while (c && c!=m)try {c=c.parentNode} catch(e){c=m}
+		if (c==m)
+			return true
+		else
+			return false
+	},
+
+	show:function(anchorobj, subobj, e){
+		if (!this.isContained(anchorobj, e)){
+			var e=window.event || e
+			if (e.type=="click" && subobj.style.visibility=="visible"){
+				subobj.style.visibility="hidden"
+				return
+			}
+			var horizontaloffset=(subobj.dropposition[0]=="left")? -(subobj.offsetWidth-anchorobj.offsetWidth) : 0 //calculate user added horizontal offset
+			var verticaloffset=(subobj.dropposition[1]=="top")? -subobj.offsetHeight : anchorobj.offsetHeight //calculate user added vertical offset
+			subobj.style.left=this.getposOffset(anchorobj, "offsetLeft") + horizontaloffset + "px"
+			subobj.style.top=this.getposOffset(anchorobj, "offsetTop")+verticaloffset+"px"
+			subobj.style.clip=(subobj.dropposition[1]=="top")? "rect(auto auto auto 0)" : "rect(0 auto 0 0)" //hide drop down box initially via clipping
+			subobj.style.visibility="visible"
+			subobj.startTime=new Date().getTime()
+			subobj.contentheight=parseInt(subobj.offsetHeight)
+			if (typeof window["hidetimer_"+subobj.id]!="undefined") //clear timer that hides drop down box?
+				clearTimeout(window["hidetimer_"+subobj.id])
+			this.slideengine(subobj, (subobj.dropposition[1]=="top")? "up" : "down")
+		}
+	},
+
+	curveincrement:function(percent){
+		return (1-Math.cos(percent*Math.PI)) 
+	},
+
+	slideengine:function(obj, direction){
+		var elapsed=new Date().getTime()-obj.startTime 
+		if (elapsed<obj.glidetime){ //if time run is less than specified length
+			var distancepercent=(direction=="down")? this.curveincrement(elapsed/obj.glidetime) : 1-this.curveincrement(elapsed/obj.glidetime)
+			var currentclip=(distancepercent*obj.contentheight)+"px"
+			obj.style.clip=(direction=="down")? "rect(0 auto "+currentclip+" 0)" : "rect("+currentclip+" auto auto 0)"
+			window["glidetimer_"+obj.id]=setTimeout(function(){dropdowncontent.slideengine(obj, direction)}, 10)
+		}
+		else{ 
+			obj.style.clip="rect(0 auto auto 0)"
+		}
+	},
+
+	hide:function(activeobj, subobj, e){
+		if (!dropdowncontent.isContained(activeobj, e)){
+			window["hidetimer_"+subobj.id]=setTimeout(function(){
+				subobj.style.visibility="hidden"
+				subobj.style.left=subobj.style.top=0
+				clearTimeout(window["glidetimer_"+subobj.id])
+			}, dropdowncontent.hidedivmouseout[1])
+		}
+	},
+
+	hidediv:function(subobjid){
+		document.getElementById(subobjid).style.visibility="hidden"
+	},
+
+	ajaxconnect:function(pageurl, divId){
+		var page_request = false
+		var bustcacheparameter=""
+		if (window.XMLHttpRequest) // if Mozilla, IE7, Safari etc
+			page_request = new XMLHttpRequest()
+		else if (window.ActiveXObject){ // if IE6 or below
+			try {
+			page_request = new ActiveXObject("Msxml2.XMLHTTP")
+			} 
+			catch (e){
+				try{
+				page_request = new ActiveXObject("Microsoft.XMLHTTP")
+				}
+				catch (e){}
+			}
+		}
+		else
+			return false
+		document.getElementById(divId).innerHTML=this.ajaxloadingmsg //Display "fetching page message"
+		page_request.onreadystatechange=function(){dropdowncontent.loadpage(page_request, divId)}
+		if (this.ajaxbustcache) //if bust caching of external page
+			bustcacheparameter=(pageurl.indexOf("?")!=-1)? "&"+new Date().getTime() : "?"+new Date().getTime()
+		page_request.open('GET', pageurl+bustcacheparameter, true)
+		page_request.send(null)
+	},
+
+	loadpage:function(page_request, divId){
+		if (page_request.readyState == 4 && (page_request.status==200 || window.location.href.indexOf("http")==-1)){
+			document.getElementById(divId).innerHTML=page_request.responseText
+		}
+	},
+
+ init:function(anchorid, pos, glidetime, revealbehavior){
+		var anchorobj=document.getElementById(anchorid)
+		var subobj=document.getElementById(anchorobj.getAttribute("rel"))
+		var subobjsource=anchorobj.getAttribute("rev")
+		if (subobjsource!=null && subobjsource!="")
+			this.ajaxconnect(subobjsource, anchorobj.getAttribute("rel"))
+		subobj.dropposition=pos.split("-")
+		subobj.glidetime=glidetime || 1000
+		subobj.style.left=subobj.style.top=0
+		if (typeof revealbehavior=="undefined" || revealbehavior=="mouseover"){
+			anchorobj.onmouseover=function(e){dropdowncontent.show(this, subobj, e)}
+			anchorobj.onmouseout=function(e){dropdowncontent.hide(subobj, subobj, e)}
+			if (this.disableanchorlink) anchorobj.onclick=function(){return false}
+		}
+		else
+			anchorobj.onclick=function(e){dropdowncontent.show(this, subobj, e); return false}
+		if (this.hidedivmouseout[0]==true) //hide drop down DIV when mouse rolls out of it?
+			subobj.onmouseout=function(e){dropdowncontent.hide(this, subobj, e)}
+	}
+}
+		
+		

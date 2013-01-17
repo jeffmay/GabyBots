@@ -1,0 +1,29 @@
+{
+
+var google_ads = new Array();
+var google_ad;
+var google_radlinks = new Array();
+var google_radlink;
+var google_info = new Object();
+google_ad = new Object(); 
+google_ad.n = 1; 
+google_ad.type = "text"; 
+google_ad.bidtype = "CPC"; 
+google_ad.targeting_type = ""; 
+google_ad.url = "http://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=C7JXKrmSYUK_mNaej6QHoooCwC7b38uYCxs_Uyj7m-uDzYBABIKjwpgZQ3q7x3_7_____AWDJhqOH1KOAEKABquuj4gPIAQGoAwGqBNYBT9C2wMuiR5pagYvShvKZZiojLPh03NeeFHB5zAf1VV5gQD9kX7ZInNkn3JGtucbxcwX2zSmqXkf2cUxiz4Znt6sr4Pyi5_7zf0GMn4RxfAz9N2q5J7jaNsZVGzc7CgYUiMZ_HyeS_zo1Xd4800kJrkLw9VRoniitrBKJLi7BaXvk8hzsrlBslp7b6z1TO-hcixfncwWQc0E1dLEwgcD26jEmcLZUwiaQs0zlXE8oNgS3Oo8aGnijRh9rxkYqvnqMOi1DGPgfuHPEyNXU4FxPm3KrB5BvmogGAQ&amp;num=1&amp;cid=5Gij0rVBB3xYu5QMNt5-VlHR&amp;sig=AOD64_39NINXPrL4hSop0WOtEt1lz8mojA&amp;client=ca-timesofindia_site_js&amp;adurl=http://www.TheCreditSolutionProgram.com/free-lessons-3g"; 
+google_ad.visible_url = "www.thecreditsolutionprogram.com"; 
+google_ad.line1 = "Man Cheats Credit Score"; 
+google_ad.line2 = "1 simple trick \x26amp; my credit score"; 
+google_ad.line3 = "jumped 217 pts. Banks hate this!"; 
+google_ad.regionname = ""; 
+google_ads[0] = google_ad; 
+google_info.feedback_url = "http://www.google.com/url?ct\x3dabg\x26q\x3dhttps://www.google.com/adsense/support/bin/request.py%3Fcontact%3Dabg_afc%26url%3Dhttp://timesofindia.indiatimes.com/india/Series-of-explosions-rock-Bahrain-capital-Indian-among-2-killed/articleshow/17109310.cms%26gl%3DUS%26hl%3Den%26client%3Dca-timesofindia_site_js%26hideleadgen%3D1%26ai0%3DC7JXKrmSYUK_mNaej6QHoooCwC7b38uYCxs_Uyj7m-uDzYBABIKjwpgZQ3q7x3_7_____AWDJhqOH1KOAEKABquuj4gPIAQGoAwGqBNYBT9C2wMuiR5pagYvShvKZZiojLPh03NeeFHB5zAf1VV5gQD9kX7ZInNkn3JGtucbxcwX2zSmqXkf2cUxiz4Znt6sr4Pyi5_7zf0GMn4RxfAz9N2q5J7jaNsZVGzc7CgYUiMZ_HyeS_zo1Xd4800kJrkLw9VRoniitrBKJLi7BaXvk8hzsrlBslp7b6z1TO-hcixfncwWQc0E1dLEwgcD26jEmcLZUwiaQs0zlXE8oNgS3Oo8aGnijRh9rxkYqvnqMOi1DGPgfuHPEyNXU4FxPm3KrB5BvmogGAQ\x26usg\x3dAFQjCNEJPlmNy5oW6PhRKorpugfdkstJFA";
+var google_attribution_text = "AdChoices";
+var google_is_rtl = false;
+if (window.google_ad_request_done) {
+google_ad_request_done(google_ads);
+}
+if (window.google_radlink_request_done) {
+google_radlink_request_done(google_radlinks);
+}
+}

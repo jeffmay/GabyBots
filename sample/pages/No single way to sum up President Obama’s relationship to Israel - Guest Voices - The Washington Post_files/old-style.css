@@ -1,0 +1,577 @@
+a:link, a:visited {color:#0c4790; text-decoration:none;}
+a:active, a:hover {color:#cc0000; text-decoration:underline;}
+
+h1, h2, h3 {
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+    }
+
+.content #indexhead h1 {font-size:12px;margin-bottom:-14px;font-weight:bold;text-align:right;}
+.content #entryhead h1 {font-size:18px;margin-bottom:6px;}
+.content #mainentry h2 {font-size:18px;margin-bottom:6px;background:none;color:#000000;font-family:Arial,Helvetica,sans-serif;font-weight:bold;margin:3px 0 5px 0;}
+
+#container {
+    line-height: 100%;
+    margin-right:auto;
+    margin-left: auto;
+    text-align: left;
+    padding: 0px;
+    width: 454px;
+    background-color: #FFFFFF;
+}
+
+#banner         { color: #000000; font-family: 'Trebuchet MS', Verdana, sans-serif; width:624px;}
+#banner-img     { display: none;}
+#banner img     { border:0;}
+#banner a       { text-decoration: underline; text-align: left; font-weight:normal; padding: 0px; }
+#banner h1      { font-size: xx-large; font-weight: bold; }
+#banner h2      { font-size: small; }
+
+#bannerstrip {
+  width:618px;
+  position: relative; bottom: 8px; left: 6px;
+  padding-bottom:4px;
+  border-bottom:1px solid #cccccc;
+  }
+
+#bannerstrip a {font-weight:bold;}
+
+#banner h3 {
+    color: #000000;
+    text_align: left;
+    font-family: 'Arial', Verdana, sans-serif;
+    text-align: left;
+    font-size:1.4em;
+    font-weight:normal;
+    font-style:normal;
+    padding: 0px;
+    margin: 0px;
+    }
+
+#banner h4 {
+    color: #000000;
+    font-family: "Times New Roman", sans-serif;
+    margin-bottom: 0px;
+    font-size:1.4em;
+    color: #384F69;
+    text-align: left;
+    font-weight: normal;
+    font-style: italic; 
+    padding: 0px;
+    }
+
+
+#left {
+    float: left;
+    width: 200px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    }
+
+#right {
+    float: left;
+    width: 200px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    }
+
+#center {
+    float: left;
+    width: 454px;
+    overflow: hidden;
+    }
+
+.content {
+    padding:0px;
+    background-color: #FFFFFF;
+    color: #000;
+    font:normal 14px arial;
+    z-index:20;}
+.content h3, .specialtop h3 {color:#000000; font-family: arial, helvetica, sans-serif; font-size:18px; font-weight:bold; margin:3px 0 5px 0; position:relative; text-align:left;}
+
+#blog_content #wrapperMain {width:970px !important;float:left;}
+#blog_content #wrapperMainLeft {padding-left:5px;width:150px;}
+
+/* Following style to correct IE content cut-off bug */
+#blog_content #wrapperMainCenter {margin-right:-3px;float:left;width:464px;}
+
+#blog_content #wrapperInternalCenter {padding-left:10px;padding-right:10px;}
+
+.specialtop {width:611px; margin:0 20px 17px 13px; background:#fff; color:#000; font:normal 14px/18px arial; border-bottom:1px dotted #000; z-index:20;}
+.specialtop p {margin:0 0 16px 0; padding:0;}
+
+.specialtop p.posted {
+    clear: both;
+    color: #555;
+    font: bold 11px Arial, Helvetica, sans-serif;
+    text-align: left;
+    line-height: normal;
+    padding: 7px 7px 0 7px;
+    }
+
+.color1 {color:#cc0000;}
+.color2 {color:#385213;}
+.color3, a.color3 {color:#333;}
+#bog-banner {position:relative; font:normal 12px arial; margin:0 0 12px 13px;}
+#bog-banner .top-links {position:absolute; top:10px; left:90px; color:#555;}
+#bog-banner .btm-links {position:absolute; top:39px; left:404px; font:bold 11px arial;}
+#bog-banner .btm-links .left {float:left; width:94px; border-right:1px dotted #cc0000; margin-right:10px;}
+#bog-banner .btm-links .right {float:left; width:94px;}
+#bog-banner .btm-links div.border {float:left; background:#fff; padding:1px; border:1px solid #cc0000;}
+#blog_content .sidebar {width:150px; margin-bottom:4px; font-weight:bold; border:0;}
+#blog_content .sidebar .top {position:relative; font:bold 11px arial; height:21px; overflow:hidden; background-image:url('http://media.washingtonpost.com/wp-srv/blogs/images/leftside-header-150.gif');}
+#blog_content .sidebar .top .title {position:absolute; top:3px; left:0; width:150px; text-align:center; color:#CC0000; text-transform:uppercase;}
+#blog_content .sidebar .box {position:relative; background:#eaeaea;padding:0;border-width:0 1px;border-style:solid;border-color:b0b0b0; padding:4px 5px 0 0;}
+#blog_content .sidebar .bottom {height:7px;background:url('http://media.washingtonpost.com/wp-srv/blogs/images/leftside-bottom-150.gif') no-repeat;}
+#blog_content .sidebar .top5-box-in {background:#d8e1ca; padding:6px 6px 0 6px;}
+#blog_content .sidebar .top5-box-in p {padding:2px 0 11px 0; margin:0; font-weight:normal;}
+#blog_content .sidebar .top5-box-in .block {padding-bottom:11px; width:144px;}
+#blog_content .sidebar .top5-box-in .block .left {float:left; width:18px; font:bold 18px arial; color:#385213;}
+#blog_content .sidebar .top5-box-in .block .right {float:left; width:126px;}
+#blog_content .sidebar .sideheader {color:#424242; font:bold 11px arial; border-bottom:1px dashed #ccc; margin:8px 0 3px 7px; clear:both;}
+#blog_content .sidebar ul {margin:0 0 0 10px; padding:0 0 3px 0; list-style-type:none; float:none;}
+#blog_content .sidebar li {list-style-image:url("http://media3.washingtonpost.com/wp-srv/blogs/images/blogBullet.gif"); padding:0 0 0.5em 0; background:none; margin: 0 0 0 8px;}
+#blog_content .sidebar li a {margin:0 0 0 -4px;}
+#blog_content .sidebar img.rss {margin:5px 0 0 7px; border:0; display:block;}
+#blog_content .sidebar .clearboth {clear:both; font-size:0; line-height:1;}
+
+/* Internet Explorer */
+* html #blog_content .sidebar li {margin: 0 0 0 15px;}
+* html #blog_content .sidebar li a {margin: 0 0 0 -8px;}
+/* End Internet Explorer */
+
+#blog_content .sidebar a:link, .sidebar a:visited {
+    color: #0c4790;
+    text-decoration: none;
+    }
+
+#blog_content .sidebar a:active, .sidebar a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+    }
+
+.content p {
+    color: #000;
+    font:normal 14px/18px arial;
+    width:454px;
+    }
+
+.content blockquote {
+    line-height: 150%;
+    }
+
+.content li {
+    line-height: 150%;
+    }
+
+.content h2 {
+    margin: 0px;
+    font: bold 12px "Times New Roman",times,serif;
+    color:#C00;
+    background-color:#eeeeee;
+    padding:0px;
+    }
+
+.content h3, .specialtop h3 {
+    color: #000;
+    font: bold 18px Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    }
+
+.content p.posted {
+    clear: both;
+    color: #555;
+    font: bold 11px Arial, Helvetica, sans-serif;
+    border-bottom: 1px dotted #000;
+    text-align: left;
+    margin-bottom: 17px;
+    line-height: normal;
+    padding: 7px 7px 19px 7px;
+    }
+
+#calendar {
+      line-height: 140%;
+    color: #333333;
+    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    font-size: x-small;
+      padding: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+
+#calendar table {
+    padding: 2px;
+    border-collapse: collapse;
+    border: 0px;
+    width: 100%;
+    }
+
+#calendar caption {
+    color: #666666;
+    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    font-size: x-small;
+    border-bottom: 1px solid #999999;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px;
+    letter-spacing: .3em;
+    }
+
+#calendar th {
+    text-align: center;
+    font-weight: normal;
+    }
+
+#calendar td {
+    text-align: center;
+    }
+
+
+
+.photo {
+    text-align: left;
+    margin-bottom: 20px;
+    }
+
+.link-note {
+    font: bold 11px/100% Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding: 2px;
+    margin-bottom: 3px;
+    }
+.recent-posts {
+    font:bold 11px/100% Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-bottom: 0px;
+    background: url(http://media3.washingtonpost.com/wp-srv/blogs/images/blogBullet.gif) no-repeat 0 8px;
+    }
+
+#powered {
+    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    font-size: x-small;
+    line-height: 100%;
+    text-align: left;
+    color: #333333;
+    margin-top: 3px;
+    }
+
+#comment-data {
+    float: left;
+    position: relative;
+    width: 180px;
+    padding-right: 15px;
+    margin-right: 15px;
+    text-align: left;
+    }
+
+textarea#comment-text     { width: 370px; }
+
+.image-full              { width: 370px; }
+.image-thumbnail         { float: left; width: 130px; margin-bottom: 10px; }
+.image-thumbnail img     { width: 115px; height: 115px; }
+
+.blog_entry              { font:normal 13px Arial, sans-serif; }
+.blog_entry p            { width:auto; margin:0 0 10px 0; padding:0;  }
+.blog_entry .imgright    { float:right; width:228px; margin:4px 0 10px 10px; } 
+
+.blog_entry .imgleft     { float:left; width:228px; margin:4px 10px 10px 0; }
+.blog_caption    {	font-size:8pt;
+	font-family:arial,sans-serif;
+	color:#333333;
+	line-height: 14px;
+}
+.blog_credit     { color:#666; 	padding-bottom:10px;}
+.clearboth               { clear:both; height:1px; }
+
+
+
+.commentText, .trackbackText	  { padding-left: 7px; }
+.commentText p, .trackbackText p, #comment-greeting	{ font: 12px/120% arial; color: #333; word-wrap:break-word;}
+#comment-greeting {padding-left:7px;margin-bottom:10px;}
+
+#comment-data            { padding-left: 7px; }
+#comment-data p          { font: bold 11px/140% Arial, Helvetica, sans-serif; }
+
+#article {width:454px; font-size:8pt;}
+
+#article .content .timestamp, .specialtop .timestamp { color:#cc0000; font:bold 12px Arial, Helvetica, sans-serif; margin: 0; }
+
+#article .blog_entry .content .archived h2    { color: #000; font: bold 15px Arial, Helvetica, sans-serif; margin-top: 0px; margin-bottom: 4px; padding-top: 15px; background:none; }
+.archived p              { font: 13px/130% "Times New Roman", Times, serif; color: #333; margin: 0; }
+.archived p.posted		 { margin-top: 0; margin-bottom: 15px; padding-top: 4px; }
+.archived				 { margin-top: -15px; }
+
+.sectionhed, .sectionhedComment          { background-color: #EEE; border: 1px solid #CCC; padding: 5px; line-height: 1.2; position: relative; width:98% }
+.sectionhed 			 { margin-bottom: 12px; }
+.sectionhedComment .commentheader, .sectionhed .commentheader   {color: #C00; font: bold 13px Arial, Helvetica, sans-serif; margin: 0; position: relative; float: left; }
+#article .blog_entry .content .sectionhed .commentheader h2 {color: #C00; font: bold 13px Arial, Helvetica, sans-serif; margin: 0; position: relative; float: left; }
+.sectionhedComment p     { color: #666; font: bold 11px Arial, Helvetica, sans-serif; margin: 2px 0 0 0; float: right; position: relative; }
+
+#banner h3				 { font: 14px Arial, Helvetica, sans-serif; margin: 0; padding: 0; }
+#banner					 { padding-bottom: 15px; }
+
+/* Hides from IE5-mac \*/
+* html .blog_entry #center {height:1%;}
+* html .blog_entry .content {height:1%;}
+/* End hide from IE5-mac */
+
+/* widget promos */
+	.fix-middle {
+background-image:url(http://media3.washingtonpost.com/wp-srv/images/widgetBlog_middle.gif);
+		background-repeat:repeat-x;
+		border-left:1px solid #ccc;
+		border-right:1px solid #ccc;
+		padding-top:10px;
+		height:315px;
+	}
+	
+	.fix-left {
+		width:248px;
+		margin-right:10px;
+		margin-left:10px;
+		float:left;	
+		}
+		
+	.fix-title {
+		font-family:arial;
+		font-size:17px;
+		font-weight:bold;
+		color:#333;
+		}
+		
+	a.more {
+		font-family:arial;
+		font-size:15px;
+		font-weight:bold;
+		color:#0C4790;
+		text-decoration:none;
+		}
+		
+	.fix-content {
+		font-family:arial;
+		font-size:13px;
+		color:#333;
+		line-height:20px;
+		}
+
+#bread_crumbs h1 {display:inline;font-size:11px;font-weight:bold;}
+
+input.searchbox {font-size:11px;}
+input.btn {font-size:11px;}
+
+.faveleft {margin-left: 0px; width: 155px; float: left;}
+.faveleft .faveitem {padding-left: 8px;}
+.faveright {width: 155px; float: right;}
+.faveright .faveitem {padding-left: 8px;}
+
+#all-cols-blogs #all-box {
+width: 130px;
+position:relative; left:0px; top:-15px; 
+background-color: #eaeaea;
+border: 0px;
+display: none;
+}
+
+#all-box
+{
+width: 130px;
+padding-top: 0px;
+padding-right: 8px;
+padding-bottom: 0px;
+padding-left: 8px;
+}
+
+#all-box img
+{
+border: none;
+margin: 3px 3px 3px 3px;
+}
+
+#all-cols-blogs #all-link a, #container #all-box a 
+{
+cursor: pointer;
+}
+
+#mwp2 .heading {color:#333333;font-size:12px;font-weight:bold;padding-bottom:3px;}
+
+img.mt-image-center {border:0}
+
+
+
+
+body {
+	background-color:#E3E1E4 !important;
+	padding-top:0px !important;
+}
+#shell {
+	background-color:#FFFFFF;
+	font-family:arial;
+	margin:0 auto;
+	padding:0 20px;
+	position:relative;
+	text-align:left;
+	width:982px;
+}
+
+.border {
+	border:1px solid #EEEEEE;
+}
+#footer-v3 .services ul.normal {
+	width:185px;	
+}
+#header-v3 {
+	font-size:92.5%;
+}
+#footer ol,
+#footer ul,
+#footer li {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#footer ul.normal li {
+	background-image:url('/rw/sites/twpweb/img/bullets/bullet-blue-sq.png');
+	background-position:left 5px;
+	background-repeat:no-repeat;
+	margin-bottom:10px;
+	padding-left:10px;
+}
+#footer ul.normal li,
+#footer ol.normal li {
+	font-weight:bold;
+}
+#footer .inline-list li {
+	float:left;
+}
+#footer .wp-row {
+	border-bottom:1px solid #DEDEDE;
+	margin-bottom:15px;
+	overflow:hidden;
+	padding-bottom:15px;
+	position:relative;
+}
+
+#blog_content #wrapperMainRight .rr-pad {
+	padding-bottom:5px;
+}
+
+/* Blog styles */
+#blog_content .sidebar .box, #blog_content .sidebar .box p {
+	border-color:#B0B0B0;
+	line-height:1.3;
+	font-size: 1em;
+	color: #666666;
+	}
+
+#blog_content #wrapperMainLeft {
+	padding-left:0px !important;
+	}
+
+#blog_content #banner a:link, #banner a:visited {
+	text-decoration:none;
+	}
+	
+#blog_content .blog-byline {
+	padding-bottom: 8px; 
+	font-style: italic; 
+	font-size: 14px;
+	}	
+
+#blog_content #b-blog-banner {
+	padding-bottom: 15px;
+	color: black;
+	font-family: 'Trebuchet MS', Verdana, sans-serif;
+	width: 624px;
+	}	
+	
+#blog_content blockquote {
+	color: black;
+	padding: 0px 20px 17px 20px;	
+	font-family:Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	}
+		
+#blog_content .blog_entry .imgfull {
+	float: left;
+	width: 454px;
+	margin: 4px 10px 10px 0;
+	}
+	
+#blog_content .blog_entry .imgthumb-left {
+	float: left;
+	margin: 4px 10px 10px 0;
+	}	
+	
+#blog_content .blog_entry .imgthumb-right {
+	float: right;
+	margin: 4px 10px 10px 0;
+	}	
+
+#blog_content .content P.posted {
+	border-bottom: none;
+	padding-bottom: 0px;
+	}
+	
+#blog_content .content .posted {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	}
+
+#blog_content #save-and-share {
+	display:block;
+	border-bottom: #000 1px dotted;
+	padding-bottom: 19px;
+	font: bold 11px Arial, Helvetica, sans-serif;
+	color: #555;
+	}
+
+#blog_content #slug_sponsor_links_in {
+	margin-bottom: 20px;
+	}
+	
+#blog_content #slug_extra_bb_2, #blog_content #slug_extra_bb_3 {
+	border-bottom: #000 1px dotted;
+	margin-bottom: 20px;
+	}
+	
+#blog_content .content .old_archives_link {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#blog_content .content .old_archives_link a:link{
+	font: 12px arial;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#blog_content .content .old_archives_link a:visited{
+	font: 12px arial;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.twitter-panelists {position: relative;top: -23px;left: 287px;}
+#blog-index-page .module a:link,#blog-index-page a:visited {
+    color: #000;
+    text-decoration: none;
+    font:bold 14px georgia;
+}
+#blog-index-page .module .tabbed-panels .panels p {
+	margin-bottom:0px;
+	font:11px arial;
+	color:#666;
+}
+#blog-index-page a:link, 
+#blog-index-page a:visited,
+#blog-index-page a {
+	color:#000; 
+	text-decoration:none;
+}

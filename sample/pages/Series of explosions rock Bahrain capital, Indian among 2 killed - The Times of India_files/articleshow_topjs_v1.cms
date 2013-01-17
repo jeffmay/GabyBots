@@ -1,0 +1,641 @@
+	
+
+		function displayNSCompanionBanners1(banners,nscparams) 
+						{
+							var nsc_banner=URLDecode(banners);
+							NSCompanionAdNew(nsc_banner,nscparams);
+							//NSCompanionAd(nsc_banner,1,1,1,crid,0);
+						}
+						function displayNSCompanionBanners(banners) 
+						{					
+							var nsc_banner=URLDecode(banners);	
+							NSCompanionAd(nsc_banner);
+						}
+function posTop() {return typeof window.pageYOffset != 'undefined' ? window.pageYOffset : document.documentElement && document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ? document.body.scrollTop : 0;}
+					function Get_Ckie(name){
+					var start=document.cookie.indexOf(name+"=")
+					var len=start+name.length+1
+					if((!start)&&(name !=document.cookie.substring(0,name.length))){
+						return null
+					}
+					if(start==-1)return null;
+					var end=document.cookie.indexOf(";",len)
+					if(end==-1)end=document.cookie.length
+					return unescape(document.cookie.substring(len,end))
+				}	
+					function Delete_Ckie(name,path,domain){
+						try{
+						if(Get_Ckie(name)){
+							document.cookie=name+"="+((path)? ";path="+path : "")+((domain)? ";domain="+domain : "")+";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+							}	
+						}
+						catch(ex){
+	
+						}
+					}
+				
+					function onPageLoadVald()
+						{
+							try
+							{	
+								glblreload=1;					
+								var getclickk= Get_Ckie("clickkept");
+								var gettwclickk= Get_Ckie("clickkepttwitter");
+								var getlogCook= Get_Ckie("MSCSAuth");
+								if(getlogCook!=null)
+								{	
+									if(getclickk=="1" || gettwclickk=="1")
+									{							
+										setTimeout("callPostStream();",1000);
+									}	
+								}
+							}
+							catch(ex)
+							{							
+							}
+						}
+					
+					
+						function callPostStream()
+						{
+							try
+							{
+							
+								var pstTop=posTop();
+								pstTop=pstTop+"px";
+								var scnHei="";
+								scnHei=document.body.clientHeight;
+								scnHei=scnHei+"px";
+								document.getElementById('popupContact').style.top=pstTop;	
+								//loadPopupNew('7',scnHei);
+								loadPopupfollowshow('9');	
+								
+							}
+							catch(ex)
+							{
+						
+							}
+						
+						}
+function loadPopup_nw(chk)
+				{
+				
+					document.getElementById("signupsso").src="";
+					var chk1=parseInt(chk);						
+					if (chk == '65'){	
+					scroll(0,0);																			
+					document.getElementById("signupsso").src="/lokpalresult.cms";
+					document.getElementById("signupsso").height="1300";
+					document.getElementById("signupsso").width="323";	
+					startfade(1);					
+					}																		
+				}
+
+function showTab2(tabsid,cls,ths,tmpvar,spanid){
+					try
+					{
+					
+/* tabsid will contain all tabids with # seperation and class contain on off class with # seperation*/
+var allTabsid = tabsid.split("#");
+var classname = cls.split("#");
+var allSpansid = spanid.split("#");
+for(tid = 0; tid < allTabsid.length; tid++){
+	if(ths == allTabsid[tid]){	
+		getObj(allTabsid[tid]).className=''+classname[0];
+		getObj(allTabsid[tid] + 'cnt').style.display='inline-block';
+		for(sid = 0; sid < allTabsid.length; sid++){
+			if(ths == allTabsid[sid]){		
+				for(sid = 0; sid < allSpansid.length; sid++){
+					if(ths == allTabsid[sid]){getObj(allSpansid[sid]).style.display='block';}
+					else{getObj(allSpansid[sid]).style.display='none';}
+				}
+			}
+			else {for(sid = 0; sid < allSpansid.length; sid++){
+					if(ths != allTabsid[sid]){getObj(allSpansid[sid]).style.display='none';}
+					else{getObj(allSpansid[sid]).style.display='block';}
+				}
+			}
+		}
+	}else{
+		getObj(allTabsid[tid]).className=''+classname[1];
+		getObj(allTabsid[tid] + 'cnt').style.display='none';
+		for(sid = 0; sid < allTabsid.length; sid++){
+			if(ths == allTabsid[sid]){
+				for(sid = 0; sid < allSpansid.length; sid++){
+					if(ths == allTabsid[sid]){getObj(allSpansid[sid]).style.display='block';}
+					else{getObj(allSpansid[sid]).style.display='none';}
+				}
+			}
+			else {for(sid = 0; sid < allSpansid.length; sid++){
+					if(ths != allTabsid[sid]){getObj(allSpansid[sid]).style.display='none';}
+					else
+					{getObj(allSpansid[sid]).style.display='block';}
+				}
+			}
+		}
+	}
+}
+return false;
+}
+catch(ex){}
+}
+
+function redhide(){
+document.getElementById("redscpt").style.display="none";
+
+
+
+}
+function loadi(io){					
+						var im = document.getElementById(io);
+						if(!(im.getAttribute("imgpath")=='' || im.getAttribute("imgpath")==null)){
+							im.src=im.getAttribute("imgpath");
+							im.setAttribute("imgpath","");
+						}
+					}
+function onPageLogin()
+						{
+							try
+							{							
+								var getclickk= Get_Ckie("clickkepfbtart"+a);
+								var gettwclickk= Get_Ckie("clickkeptwtart"+a);
+								var getlogCook= Get_Ckie("MSCSAuth");											
+								if(getlogCook!=null)
+								{	
+									if(getclickk==a || gettwclickk==a)
+									{							
+										setTimeout("callPostLogin();",1000);
+									}	
+								}
+							}
+							catch(ex)
+							{
+							}
+						}
+					
+						function callPostLogin()
+						{
+							try
+							{						
+								var pstTop=posTop();
+								pstTop=pstTop+"px";
+								var scnHei="";
+								scnHei=document.body.clientHeight;
+								scnHei=scnHei+"px";
+								document.getElementById('popupContact').style.top=pstTop;						
+								loadPopupNew('8',scnHei);		
+							}
+							catch(ex)
+							{							
+							}						
+						}
+					function saveMsgId(objid,articleId){
+						try{
+							var objForm = document.getElementById(objid);
+							var msgtrunc=objForm.message.value;
+							if(msgtrunc!=""){
+							msgtrunc=msgtrunc.replace("&", "%26");
+							Set_Ckie("txtmsg"+articleId,msgtrunc,1,"/",".indiatimes.com","");
+							Set_Ckie("articleid",articleId,1,"/",".indiatimes.com","");						
+
+							}
+						}
+						catch(ex){						
+						}
+					}
+
+					function clickCapture(prm,articleId,objId)				
+					{
+						try{
+							var objForm = document.getElementById(objId);							
+							var msgtrunc=objForm.message.value;
+						
+							if(msgtrunc=="" || msgtrunc=="Your comment")
+							{
+								alert("Please enter your comment");				
+							}
+							else
+							{
+								if(prm=="1"){
+									Set_Ckie("fbcheck","1",1,"/",".indiatimes.com","");						
+									Set_Ckie("clickkepfbtart"+articleId,articleId,0,"/",".indiatimes.com","");
+									Set_Ckie("clickkepfbtart","1",0,"/",".indiatimes.com","");
+									openSigninNew('1');
+								}
+								else {
+									Set_Ckie("twtcheck","1",1,"/",".indiatimes.com","");
+									Set_Ckie("clickkeptwtart"+articleId,articleId,0,"/",".indiatimes.com","");
+									Set_Ckie("clickkeptwtart","1",0,"/",".indiatimes.com","");
+									openSigninNew('2');
+								}
+							}
+						}
+						catch(ex){
+										
+						}
+					}
+
+function populatediv_FkBook(urlval,divval){	
+				
+				
+					populate_FkBook(urlval,divval,'');
+					}
+
+function populate_FkBook(urlval,divval,loading){
+					try{
+
+					var xmlhttp=false;
+					var status=0;
+					if(loading != 'no'){			
+					var str_temp = '<div style="padding-left:100px;font-size:12px;font-weight:bold;"><br/><br/><br/>Loading<img border="0" src="/photo.cms?msid=1748421" hspace="5"><br/><br/></div>';
+					str_temp = str_temp + '';
+					document.getElementById(divval).innerHTML = str_temp;}
+					xmlhttp = window.XMLHttpRequest?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");
+				
+					if (xmlhttp){	
+					xmlhttp.onreadystatechange=function(){
+					if (xmlhttp.readyState==4){				
+					if (xmlhttp.status==200){				
+					document.getElementById(divval).innerHTML=xmlhttp.responseText;
+				
+					fbauthid=document.getElementById('fboauthid').value;
+				
+				
+						if(fbauthid!='F'){
+							userImgSFT="http://graph.facebook.com/"+fbauthid+"/picture";
+						}
+						else {
+							userImgSFT="";
+						}
+					
+						Set_Ckie("fbook_image",userImgSFT,1,"/",".indiatimes.com","");
+					
+					}
+					else if (xmlhttp.status==404) status=0
+					else status=0}}
+					xmlhttp.open("GET",urlval,true);
+					xmlhttp.send(null);
+					}}catch (e){
+				
+				
+					xmlhttp = false; }}
+							function move_box(dcd) { 
+								   window.scrollTo(0,0);
+								   if(dcd == 1)
+								   {
+									loadPopup('1'); }
+									else
+									{loadPopup('14');}
+								}  
+
+function invokeLogin(){
+						try{
+										
+						isLoggedSso = Get_Ckie('MSCSAuth');
+						if(Get_Ckie('autologin')!=null){
+							Delete_Ckie("autologin","/",".indiatimes.com");
+						}
+						if(Get_Ckie('autologin')!=null){
+							if(Get_Ckie('autologin')=='2'){
+								Delete_Ckie("autologin","/",".indiatimes.com");
+							}
+						}
+						_tp_uid=Get_Ckie('MSCSAuthDetails').split('=')[1];
+						if(_tp_uid.indexOf('@')==-1)
+								{
+									_tp_uid=_tp_uid+"@indiatimes.com";
+								}	
+						tpbar1();		
+						setTimeout("loggedmyprofile1();",2000);
+						setTimeout("loadPoints();",4000);											
+						setTimeout("twtFbSso();",1000);
+						setTimeout("dolike();",2000);
+						setTimeout("populate_wf_new('/new_cmtofart2_v4/'+ navmsid +'.cms?msid='+ navmsid,'populatecomment','no','authlayer();putMathQ(1);fillformdetail(1);putCmtCnt();getemid();logtimespoint(1);')",3000);
+						}
+						catch(ex){									
+						}					
+					}
+
+function openloginsm() {
+						scroll(0, 0);
+						loadPopup('1');
+						saveMsg('commentOnArticle');				
+					}
+					function openSelectloginsm(obj) {
+					    inputs = document.getElementById("srcloginsm");
+					    active = document.getElementById("srcloginopenboxsm");
+					    if (obj == 'srcloginsm') {
+					        if (inputs.style.display == "block") {
+					            inputs.style.display = "none";
+					            inputs.style.visibility = "hidden";
+					        } else {
+					            inputs.style.display = "block";
+					            inputs.style.visibility = "visible";
+					        }
+					    } else {
+					        scroll(0, 0);
+					        loadPopup('1');
+					        textnode = document.getElementById(obj).innerHTML;
+					        saveMsg('commentOnArticle');
+					        active.innerHTML = textnode;
+					        inputs.style.display = "none";
+					        inputs.style.visibility = "hidden";
+					        //document.frmsearch1.search1.value=obj;
+					    }
+					}
+	                    function expand1(pos)
+	                    { 
+	                        document.getElementById('smallcomment'+pos).style.display="none";
+	                        document.getElementById('comment'+pos).style.display="block";
+	                    }
+	                    function collapse1(pos)
+	                    { 
+	                        document.getElementById('smallcomment'+pos).style.display="block";
+	                        document.getElementById('comment'+pos).style.display="none";
+	                    }
+function openSigninNew(paramChk){
+			try {
+			var fbtwtUrl="";
+			Set_Ckie("frmbtm","1",1,"/",".indiatimes.com","");
+			if(paramChk=="1"){
+			Set_Ckie("loginbegin","1",0,"/",".indiatimes.com","");
+			fbtwtUrl="http://socialappsintegrator.indiatimes.com/socialsite/OAuth";
+			sigintwtfb = window.open (fbtwtUrl,"sigintwtfb","location=1,status=1,scrollbars=1,width=670,height=380");
+			setTimeout(function() {
+			  sigintwtfb.moveTo(315,250);
+			}, 4/*ms*/);
+			}
+			else {
+			fbtwtUrl="http://socialappsintegrator.indiatimes.com/socialsite/twitterrequest";
+			sigintwtfb = window.open (fbtwtUrl,"sigintwtfb","location=1,status=1,scrollbars=0,width=755,height=350");
+			sigintwtfb.moveTo(275,200);
+			}
+			}
+
+			catch(ex){}
+			}
+			
+
+			function openSigninNewSocRd(paramChk){
+					try {
+					var fbtwtUrl="";
+					Set_Ckie("frmbtm","1",1,"/",".indiatimes.com","");
+					if(paramChk=="1"){
+					Set_Ckie("autologinsocial","1",0,"/",".indiatimes.com","");
+					Set_Ckie("loginbegin","1",0,"/",".indiatimes.com","");
+					fbtwtUrl="http://socialappsintegrator.indiatimes.com/socialsite/OAuth?channel=toi";
+					sigintwtfb = window.open (fbtwtUrl,"sigintwtfb","location=1,status=1,scrollbars=1,width=670,height=380");
+					setTimeout(function() {
+					  sigintwtfb.moveTo(315,250);
+					}, 4/*ms*/);
+					}
+					else {
+					fbtwtUrl="http://socialappsintegrator.indiatimes.com/socialsite/twitterrequest";
+					sigintwtfb = window.open (fbtwtUrl,"sigintwtfb","location=1,status=1,scrollbars=0,width=755,height=350");
+					sigintwtfb.moveTo(275,200);
+					}
+					}
+
+					catch(ex){}
+					}
+			function cmbo(opn)
+{
+if(opn == 1)
+{document.frm1.searchtype.value="2";}
+else
+{document.frm1.searchtype.value="1";}
+}
+
+		var glblreload=0;
+		function closereload()
+			{
+				if(glblreload==1)
+				{		
+				top.location.href=top.location.href;	
+				disablePopup();				
+				}
+				else
+				{
+					disablePopup();
+				}
+			}
+function removejscssfile(filename, filetype)
+                               {
+                               var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" 
+                               //determine element type to create nodelist from
+                               var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" 
+                               //determine corresponding attribute to test for
+                               var allsuspects=document.getElementsByTagName(targetelement)
+                               for (var i=allsuspects.length; i>=0; i--){ 
+                               //search backwards within nodelist for matching elements to remove
+                                      if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)allsuspects[i].parentNode.removeChild(allsuspects[i]) 
+                                      //remove element by calling parentNode.removeChild()
+                                      }
+                               }
+                               function loadjscssfile(filename, filetype)
+                               {                                     
+                                if (filetype=="js"){ 
+                                       //if filename is a external JavaScript file
+                                 var fileref=document.createElement('script')
+                                 fileref.setAttribute("type","text/javascript")
+                                 fileref.setAttribute("src", filename);                         
+                                }
+                                else if (filetype=="css"){ 
+                                       //if filename is an external CSS file
+                                 var fileref=document.createElement("link")
+                                 fileref.setAttribute("rel", "stylesheet")
+                                 fileref.setAttribute("type", "text/css")
+                                 fileref.setAttribute("href", filename)
+                                }
+                                if (typeof fileref!="undefined")
+                                 document.getElementsByTagName("head")[0].appendChild(fileref)
+                               }
+ 
+                               function checkloadjscssfile(filename, filetype)
+                               {
+                                 loadjscssfile(filename, filetype)
+                                 filesadded+="["+filename+"]" //List of files added in the form "[filename1],[filename2],etc"                               
+                               }
+                               function checkdeletejscssfile(filename, filetype)
+                               {
+                                 removejscssfile(filename, filetype)
+                                 filesdeleted+="["+filename+"]" //List of files added in the form "[filename1],[filename2],etc"                               
+                               }
+
+function getElementSso(aID){
+								return (document.getElementById) ?
+								document.getElementById(aID) : document.all[aID];
+								}
+								function getIFrameDocumentSso(aID){
+								var rv = null;
+								var frame=getElementSso(aID);
+								if (frame.contentDocument)
+								rv = frame.contentDocument;
+								else // bad IE ;)
+								rv = document.frames[aID].document;
+								return rv;
+								}
+								function adjustMySsoHeight(elemId,ht){
+								try
+								{	
+								
+								var frame = getElementSso(elemId);
+								var frameDoc = getIFrameDocumentSso(elemId);														
+								if(ht=="X"){								
+								frame.height =frameDoc.body.scrollHeight;
+								}
+								else {								
+								ht=ht+134;								
+								frame.height=ht;
+								}								
+								}
+								catch(ex)
+								{	
+															
+								}
+								}
+
+								function adjustMySsoHeightNew(elemId){
+								try
+								{
+								
+								var frame1 = getElementSso(elemId);
+								var frameDoc1 = getIFrameDocumentSso(elemId);
+								frame1.height = frameDoc1.body.scrollHeight;
+								
+								}
+								catch(ex)
+								{
+								}
+								}
+
+								function adjustMySsoHeightNewX(elemId,hxT)
+								{
+								
+								try
+								{									
+									hxT=hxT+20;																		
+									window.frames['signupsso'].document.getElementById('shwclip').height=hxT;
+								}
+								catch(ex)
+								{	
+															
+								}
+								}
+								
+
+								function adjusthgt(hgt)
+									{
+									try
+									{
+									
+									if(hgt=='3')
+									{
+									document.getElementById("signupsso").height=510;
+									document.getElementById("signupsso").width=580;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									else if(hgt=='5')
+									{
+									document.getElementById("signupsso").height=510;
+									document.getElementById("signupsso").width=528;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									else if(hgt=='1')
+									{
+									//document.getElementById("signupsso").height=528;
+									document.getElementById("signupsso").height=364;
+									document.getElementById("signupsso").width=540;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									else if(hgt=='6')
+									{
+									document.getElementById("signupsso").height=452;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									else if(hgt=='4')
+									{
+									document.getElementById("signupsso").height=255;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									else if(hgt=='7')
+									{
+									document.getElementById("signupsso").height=480;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									else if(hgt=='8')
+									{
+								
+									document.getElementById("mainblkdiv").style.width="580px";
+									document.getElementById("signupsso").width=540;
+									document.getElementById("clsimg").style.display="inline";						
+								
+									}
+									else if(hgt=='9')
+									{
+									//document.getElementById("signupsso").height=555;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									else if(hgt=='10')
+									{
+									document.getElementById("signupsso").height=460;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									else if(hgt=='12')
+									{
+									document.getElementById("signupsso").height=105;
+									document.getElementById("signupsso").width=430;
+									document.getElementById("mainblkdiv").style.width="430px";
+									document.getElementById("clsimg").style.display="none";
+									}
+									else if(hgt=='13')
+									{
+									document.getElementById("signupsso").height=145;
+									document.getElementById("clsimg").style.display="none";
+									}
+									else if(hgt=='14')
+									{
+									document.getElementById("signupsso").height=172;
+									document.getElementById("clsimg").style.display="none";
+									}
+									else if(hgt=='15')
+									{
+									document.getElementById("signupsso").height=496;
+								
+									}
+									else if(hgt=='16')
+									{
+									document.getElementById("signupsso").height=530;
+								
+									}
+									else if(hgt=='20')
+									{
+									document.getElementById("signupsso").height=255;
+								
+									}
+									else if(hgt=='21')
+									{
+									document.getElementById("signupsso").height=500;								
+									}
+									else if(hgt=='22')
+									{
+									document.getElementById("signupsso").height=150;								
+									}
+									else if(hgt=='23')
+									{									
+										document.getElementById("signupsso").height=560;
+										document.getElementById("signupsso").width=540;
+										document.getElementById("clsimg").style.display="inline";
+									}
+									else
+									{
+									document.getElementById("signupsso").height=200;
+									document.getElementById("clsimg").style.display="inline";
+									}
+									}
+									catch(ex){
+									}
+									}
+
+
+		

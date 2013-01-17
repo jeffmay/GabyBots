@@ -1,0 +1,32 @@
+
+				var allrv = {"sec":[]};			
+function getEmElements(name){
+	var x = new Array();
+	var ems = document.getElementsByTagName("em");
+	for(yi=0;yi<ems.length;yi++){
+		if(ems[yi].getAttribute("name")==name)x.push(ems[yi]);
+	}
+	return x;
+}
+function getImg(x){						
+	switch(x){
+							case '1'	:return 5659362;break;
+							case '1.5':return 5659363;break;
+							case '2'	:return 5659364;break;
+							case '2.5':return 5659365;break;
+							case '3'	:return 5659366;break;
+							case '3.5':return 5659367;break;
+							case '4'	:return 5659368;break;
+							case '4.5':return 5659369;break;
+							case '5':return 5659370;break;
+							default: return '0';break;
+						}
+}	
+for(xi=0;xi<allrv.sec.length;xi++){												
+						var em = getEmElements(allrv.sec[xi].msid);						
+						for(ed=0;ed<em.length;ed++){	
+							if(getImg(allrv.sec[xi].cntval)!='0')							
+							em[ed].innerHTML='<img border="0" style="border:0px;margin-left:5px;" src="/photo/'+getImg(allrv.sec[xi].cntval)+'.cms"/>';
+						}
+					}
+		
